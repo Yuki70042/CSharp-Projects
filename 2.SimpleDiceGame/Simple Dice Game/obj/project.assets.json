@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projet\\C#\\CSharp-Projects\\Simple Dice Game\\Simple Dice Game\\Simple Dice Game.csproj",
+      "projectUniqueName": "D:\\Projet\\C#\\CSharp-Projects\\2.SimpleDiceGame\\Simple Dice Game\\Simple Dice Game.csproj",
       "projectName": "Simple Dice Game",
-      "projectPath": "D:\\Projet\\C#\\CSharp-Projects\\Simple Dice Game\\Simple Dice Game\\Simple Dice Game.csproj",
+      "projectPath": "D:\\Projet\\C#\\CSharp-Projects\\2.SimpleDiceGame\\Simple Dice Game\\Simple Dice Game.csproj",
       "packagesPath": "C:\\Users\\lizli\\.nuget\\packages\\",
-      "outputPath": "D:\\Projet\\C#\\CSharp-Projects\\Simple Dice Game\\Simple Dice Game\\obj\\",
+      "outputPath": "D:\\Projet\\C#\\CSharp-Projects\\2.SimpleDiceGame\\Simple Dice Game\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lizli\\AppData\\Roaming\\NuGet\\NuGet.Config",

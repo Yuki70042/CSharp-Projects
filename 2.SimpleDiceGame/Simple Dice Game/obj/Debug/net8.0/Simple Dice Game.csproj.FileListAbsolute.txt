@@ -1,0 +1,15 @@
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\bin\Debug\net8.0\Simple Dice Game.exe
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\bin\Debug\net8.0\Simple Dice Game.deps.json
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\bin\Debug\net8.0\Simple Dice Game.runtimeconfig.json
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\bin\Debug\net8.0\Simple Dice Game.dll
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\bin\Debug\net8.0\Simple Dice Game.pdb
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\obj\Debug\net8.0\Simple Dice Game.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\obj\Debug\net8.0\Simple Dice Game.AssemblyInfoInputs.cache
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\obj\Debug\net8.0\Simple Dice Game.AssemblyInfo.cs
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\obj\Debug\net8.0\Simple Dice Game.csproj.CoreCompileInputs.cache
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\obj\Debug\net8.0\Simple Dice Game.sourcelink.json
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\obj\Debug\net8.0\Simple Dice Game.dll
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\obj\Debug\net8.0\refint\Simple Dice Game.dll
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\obj\Debug\net8.0\Simple Dice Game.pdb
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\obj\Debug\net8.0\Simple Dice Game.genruntimeconfig.cache
+D:\Projet\C#\CSharp-Projects\2.SimpleDiceGame\Simple Dice Game\obj\Debug\net8.0\ref\Simple Dice Game.dll
