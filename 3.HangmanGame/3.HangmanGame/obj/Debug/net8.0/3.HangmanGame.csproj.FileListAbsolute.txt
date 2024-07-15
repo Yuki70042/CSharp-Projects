@@ -1,0 +1,15 @@
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\bin\Debug\net8.0\3.HangmanGame.exe
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\bin\Debug\net8.0\3.HangmanGame.deps.json
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\bin\Debug\net8.0\3.HangmanGame.runtimeconfig.json
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\bin\Debug\net8.0\3.HangmanGame.dll
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\bin\Debug\net8.0\3.HangmanGame.pdb
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\obj\Debug\net8.0\3.HangmanGame.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\obj\Debug\net8.0\3.HangmanGame.AssemblyInfoInputs.cache
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\obj\Debug\net8.0\3.HangmanGame.AssemblyInfo.cs
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\obj\Debug\net8.0\3.HangmanGame.csproj.CoreCompileInputs.cache
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\obj\Debug\net8.0\3.HangmanGame.sourcelink.json
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\obj\Debug\net8.0\3.HangmanGame.dll
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\obj\Debug\net8.0\refint\3.HangmanGame.dll
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\obj\Debug\net8.0\3.HangmanGame.pdb
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\obj\Debug\net8.0\3.HangmanGame.genruntimeconfig.cache
+D:\Projet\C#\CSharp-Projects\3.HangmanGame\3.HangmanGame\obj\Debug\net8.0\ref\3.HangmanGame.dll

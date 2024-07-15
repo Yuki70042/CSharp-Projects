@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lizli\\source\\repos\\3.HangmanGame\\3.HangmanGame\\3.HangmanGame.csproj": {}
+    "D:\\Projet\\C#\\CSharp-Projects\\3.HangmanGame\\3.HangmanGame\\3.HangmanGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lizli\\source\\repos\\3.HangmanGame\\3.HangmanGame\\3.HangmanGame.csproj": {
+    "D:\\Projet\\C#\\CSharp-Projects\\3.HangmanGame\\3.HangmanGame\\3.HangmanGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lizli\\source\\repos\\3.HangmanGame\\3.HangmanGame\\3.HangmanGame.csproj",
+        "projectUniqueName": "D:\\Projet\\C#\\CSharp-Projects\\3.HangmanGame\\3.HangmanGame\\3.HangmanGame.csproj",
         "projectName": "3.HangmanGame",
-        "projectPath": "C:\\Users\\lizli\\source\\repos\\3.HangmanGame\\3.HangmanGame\\3.HangmanGame.csproj",
+        "projectPath": "D:\\Projet\\C#\\CSharp-Projects\\3.HangmanGame\\3.HangmanGame\\3.HangmanGame.csproj",
         "packagesPath": "C:\\Users\\lizli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lizli\\source\\repos\\3.HangmanGame\\3.HangmanGame\\obj\\",
+        "outputPath": "D:\\Projet\\C#\\CSharp-Projects\\3.HangmanGame\\3.HangmanGame\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lizli\\AppData\\Roaming\\NuGet\\NuGet.Config",

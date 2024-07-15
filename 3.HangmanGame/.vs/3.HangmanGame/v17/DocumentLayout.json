@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lizli\\source\\repos\\3.HangmanGame\\",
+  "WorkspaceRootPath": "D:\\Projet\\C#\\CSharp-Projects\\3.HangmanGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E40B28C-7509-42A4-9123-F85A8B5B195C}|3.HangmanGame\\3.HangmanGame.csproj|c:\\users\\lizli\\source\\repos\\3.hangmangame\\3.hangmangame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6E40B28C-7509-42A4-9123-F85A8B5B195C}|3.HangmanGame\\3.HangmanGame.csproj|d:\\projet\\c#\\csharp-projects\\3.hangmangame\\3.hangmangame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E40B28C-7509-42A4-9123-F85A8B5B195C}|3.HangmanGame\\3.HangmanGame.csproj|solutionrelative:3.hangmangame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lizli\\source\\repos\\3.HangmanGame\\3.HangmanGame\\Program.cs",
+              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\3.HangmanGame\\3.HangmanGame\\Program.cs",
               "RelativeDocumentMoniker": "3.HangmanGame\\Program.cs",
-              "ToolTip": "C:\\Users\\lizli\\source\\repos\\3.HangmanGame\\3.HangmanGame\\Program.cs",
+              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\3.HangmanGame\\3.HangmanGame\\Program.cs",
               "RelativeToolTip": "3.HangmanGame\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAgwC8AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-14T14:34:02.369Z",
               "EditorCaption": ""
