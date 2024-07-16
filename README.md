@@ -2,6 +2,6 @@
 A set of my programs to learn c#
 
 
-1. Calculator (07/12/2024)
-2. A Little Dice Game (07/13/2024)
-3. Hangman Game (07/15/2024 - ___ )
+1. Calculator (2024/07/12)
+2. A Little Dice Game (2024/07/13)
+3. Hangman Game (2024/07/15 - 2024/mm/jj )
