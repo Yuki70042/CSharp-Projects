@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Program
 {
@@ -12,9 +13,12 @@ namespace Program
             {
                 // initialization variables
 
-                Console.WriteLine("Enter the word to guess");
+                Console.WriteLine("Let's Start ! \nEnter the word to guess");
                 string WordToFind = Console.ReadLine().ToLower();
+                Console.WriteLine($"Word '{WordToFind}' validate.\n Warning. The console will be clear");
+                Thread.Sleep(3000);
                 Console.Clear(); // Clear the Console to make sense of the game
+
 
                 char[] CurrentWord = new char[WordToFind.Length]; // This variable will maintain the player's advance
                 for (int i = 0; i < WordToFind.Length; i++)
@@ -24,67 +28,63 @@ namespace Program
 
                 int attempt = 10; // number of tries remaining
                 bool WordFound = false;
-                string UserTest;
-
-                
+                string UserInput;
 
 
-                while (!WordFound && attempt != 0) // main loop
-                { 
+                while (!WordFound && attempt != 0)
+                {
                     Console.WriteLine(CurrentWord);
-                    Console.WriteLine("Player, enter a letter or word");
-                    UserTest = Console.ReadLine().ToLower();
+                    Console.WriteLine("Joueur, entrez une lettre ou tapez le mot complet pour deviner :");
 
-                    if (UserTest.Length >= 1) 
-                    { 
-                        if (UserTest == WordToFind)
-                        {
-                            WordFound = true;
-                        }
-                        else
-                        {
-                            Console.WriteLine("You're Wrong! \n Try again...");
-                            attempt--;
-                        }
-                    }
+                    UserInput = Console.ReadLine().ToLower(); // change user input in lowercase
 
-
-                    else if (UserTest.Length == 1)
+                    if (UserInput.Length == 1 && char.IsLetter(UserInput[0])) // User input only one character, a letter
                     {
-                        char letter;
-                        bool FindLetter = false;
-                        letter = Console.ReadLine()[0];
+
+                        char letter = UserInput[0];
+                        bool letterFound = false;
+
+                        // Check if the letter is in the word
                         for (int i = 0; i < WordToFind.Length; i++)
                         {
                             if (WordToFind[i] == letter)
                             {
                                 CurrentWord[i] = letter;
-
-                                FindLetter = true;
-                                Console.WriteLine(CurrentWord);
+                                letterFound = true;
                             }
                         }
 
-
-                        if (FindLetter)
+                        if (!letterFound)
                         {
-                            Console.WriteLine($"Congratulation ! You find the letter {letter}!");
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Miss, the letter {letter} isn't in the word");
+                            Console.WriteLine($"Too bad for you, the letter '{letter}' isn't in the word to guess");
                             attempt--;
                         }
                     }
-
-
-                    else // when no key is entered
+                    else if (UserInput.Length > 1) // If the user input a word
                     {
-                        Console.WriteLine("Please, press a letter on your keyboard");
+
+                        if (UserInput == WordToFind)
+                        {
+                            WordFound = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Wrong ! \n Try again...");
+                            attempt--;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter a valide letter");
                     }
 
-                    //Console.Clear(); // Clear a Console every loop for a better visual (and little more difficult)
+                    // Vérifie si le mot a été entièrement trouvé
+                    if (new string(CurrentWord) == WordToFind)
+                    {
+                        WordFound = true;
+                    }
                 }
+
 
 
 
