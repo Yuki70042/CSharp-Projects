@@ -9,7 +9,6 @@ namespace Program
         {
             bool Replay = true;
             
-            /*
             // ---  Introduction and Rules Part
             Console.WriteLine("Welcome in my new small game Players !");
             Thread.Sleep(1500);
@@ -27,14 +26,28 @@ namespace Program
             Console.WriteLine("The game is lost if the hanged man is drawn in full!\n");
             Thread.Sleep(1000);
             // -------------------------------------------------------------------------
-            */
 
             while (Replay)
             {
-                // initialization variables
+                // Initialization variables
+                bool wordOk = false;
+                string WordToFind = "";
 
-                Console.WriteLine("Now, Let's Start ! \nPlease Player 1, Enter the word to guess :");
-                string WordToFind = Console.ReadLine().ToLower();
+                while (!wordOk)
+                {
+                    Console.WriteLine("Now, Let's Start ! \nPlease Player 1, Enter the word to guess (only letters): ");
+                    WordToFind = Console.ReadLine().ToLower();
+
+                    if (IsWordValid(WordToFind))
+                    {
+                        wordOk = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The word must contain only letters. Please try again.");
+                    }
+                }
+
                 Console.WriteLine($"Word '{WordToFind}' validate!\nWarning,\nThe console will be clear shortly...");
                 
                 Thread.Sleep(3000);
@@ -190,6 +203,21 @@ namespace Program
 
         }
 
+
+
+        static bool IsWordValid(string word)
+        {
+            foreach (char c in word)
+            {
+                if (!char.IsLetter(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
         public static string Print_Hangman(int lvl) // Method for display the progress of hangman
         {
             switch (lvl)
@@ -218,5 +246,7 @@ namespace Program
 
 
         }
+
+
     }
 }
