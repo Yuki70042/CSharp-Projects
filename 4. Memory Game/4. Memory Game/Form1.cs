@@ -6,5 +6,10 @@ namespace _4._Memory_Game
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lblHelloWorld.Text = "Hello World!";
+        }
     }
 }

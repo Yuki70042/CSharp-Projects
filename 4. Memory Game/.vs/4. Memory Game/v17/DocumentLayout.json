@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{58ECDE52-5333-4736-A3D1-61D8E94A85ED}|4. Memory Game\\4. Memory Game.csproj|d:\\projet\\c#\\csharp-projects\\4. memory game\\4. memory game\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{58ECDE52-5333-4736-A3D1-61D8E94A85ED}|4. Memory Game\\4. Memory Game.csproj|solutionrelative:4. memory game\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58ECDE52-5333-4736-A3D1-61D8E94A85ED}|4. Memory Game\\4. Memory Game.csproj|d:\\projet\\c#\\csharp-projects\\4. memory game\\4. memory game\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58ECDE52-5333-4736-A3D1-61D8E94A85ED}|4. Memory Game\\4. Memory Game.csproj|solutionrelative:4. memory game\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\4. Memory Game\\4. Memory Game\\Form1.cs",
+              "RelativeDocumentMoniker": "4. Memory Game\\Form1.cs",
+              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\4. Memory Game\\4. Memory Game\\Form1.cs",
+              "RelativeToolTip": "4. Memory Game\\Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T18:44:15.416Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
