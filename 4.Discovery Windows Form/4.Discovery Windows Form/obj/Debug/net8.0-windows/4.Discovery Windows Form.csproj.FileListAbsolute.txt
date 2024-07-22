@@ -1,0 +1,17 @@
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\bin\Debug\net8.0-windows\4.Discovery Windows Form.exe
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\bin\Debug\net8.0-windows\4.Discovery Windows Form.deps.json
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\bin\Debug\net8.0-windows\4.Discovery Windows Form.runtimeconfig.json
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\bin\Debug\net8.0-windows\4.Discovery Windows Form.dll
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\bin\Debug\net8.0-windows\4.Discovery Windows Form.pdb
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\_4.Discovery_Windows_Form.Form1.resources
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\4.Discovery Windows Form.csproj.GenerateResource.cache
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\4.Discovery Windows Form.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\4.Discovery Windows Form.AssemblyInfoInputs.cache
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\4.Discovery Windows Form.AssemblyInfo.cs
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\4.Discovery Windows Form.csproj.CoreCompileInputs.cache
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\4.Discovery Windows Form.sourcelink.json
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\4.Discovery Windows Form.dll
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\refint\4.Discovery Windows Form.dll
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\4.Discovery Windows Form.pdb
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\4.Discovery Windows Form.genruntimeconfig.cache
+D:\Projet\C#\CSharp-Projects\4.Discovery Windows Form\4.Discovery Windows Form\obj\Debug\net8.0-windows\ref\4.Discovery Windows Form.dll
