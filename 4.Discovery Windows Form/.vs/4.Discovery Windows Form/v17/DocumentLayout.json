@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{2DCD8FD1-ABBA-438C-B7F0-F15569287FDB}|4.Discovery Windows Form\\4.Discovery Windows Form.csproj|d:\\projet\\c#\\csharp-projects\\4.discovery windows form\\4.discovery windows form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DCD8FD1-ABBA-438C-B7F0-F15569287FDB}|4.Discovery Windows Form\\4.Discovery Windows Form.csproj|solutionrelative:4.discovery windows form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DCD8FD1-ABBA-438C-B7F0-F15569287FDB}|4.Discovery Windows Form\\4.Discovery Windows Form.csproj|d:\\projet\\c#\\csharp-projects\\4.discovery windows form\\4.discovery windows form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DCD8FD1-ABBA-438C-B7F0-F15569287FDB}|4.Discovery Windows Form\\4.Discovery Windows Form.csproj|solutionrelative:4.discovery windows form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\4.Discovery Windows Form\\4.Discovery Windows Form\\Form1.cs",
+              "RelativeDocumentMoniker": "4.Discovery Windows Form\\Form1.cs",
+              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\4.Discovery Windows Form\\4.Discovery Windows Form\\Form1.cs",
+              "RelativeToolTip": "4.Discovery Windows Form\\Form1.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAewCUAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T18:21:32.286Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
