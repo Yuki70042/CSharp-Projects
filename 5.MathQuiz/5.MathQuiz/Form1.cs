@@ -1,3 +1,5 @@
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
+
 namespace _5.MathQuiz
 {
     public partial class Form1 : Form
@@ -28,16 +30,23 @@ namespace _5.MathQuiz
         // for the division problem. 
         int dividend;
         int divisor;
+
+        // This integer variable keeps track of the
+        // remaining time.
+        int timeLeft;
+
         //                        ------------------     
 
-        /// <summary>
-        /// Start the quiz by filling in all of the problems
-        /// and starting the timer.
-        /// </summary>
-        /// 
+
+
+
 
 
         public void StartTheQuiz()
+        /* 
+            Start the quiz by filling in all of the problems
+            and starting the timer.      
+        */
         {
 
             //                ----------------          Addition Part
@@ -60,7 +69,7 @@ namespace _5.MathQuiz
             sum.Value = 0;
 
 
-            //                ----------------          Subtraction Part
+            //                ----------------         Subtraction Part
             // Fill in the subtraction problem.
             minuend = randomizer.Next(1, 101);
             subtrahend = randomizer.Next(1, minuend);
@@ -71,7 +80,7 @@ namespace _5.MathQuiz
             difference.Value = 0;
 
 
-            //                ----------------          Multiplication Part
+            //                ----------------         Multiplication Part
             // Fill in the multiplication problem.
             multiplicand = randomizer.Next(2, 11);
             multiplier = randomizer.Next(2, 11);
@@ -82,7 +91,7 @@ namespace _5.MathQuiz
             product.Value = 0;
 
 
-            //                ----------------          Division Part
+            //                ----------------         Division Part
             // Fill in the division problem.
             divisor = randomizer.Next(2, 11);
             int temporyQuotient = randomizer.Next(2, 11);
@@ -93,28 +102,26 @@ namespace _5.MathQuiz
         }
 
 
+        private bool CheckTheAnswer()
+            /* Check the answers to see if the user got everything right
+             * Return true if the answer's correcte, false otherwise
+            */
+        {
+            if ((addend1 + addend2 == sum.Value)
+                && (minuend - subtrahend == difference.Value)
+                && (multiplicand * multiplier == product.Value)
+                && (dividend / divisor == quotient.Value))
+                return true;
+
+            else
+                return false;
+        }
+
+
 
         public Form1()
         {
             InitializeComponent();
-        }
-
-
-
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -122,10 +129,48 @@ namespace _5.MathQuiz
 
         }
 
+
+
         private void startButton_Click(object sender, EventArgs e)
         {
             StartTheQuiz();
             startButton.Enabled = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (CheckTheAnswer())
+            {
+                // If CheckTheAnswer() returns true, then the user 
+                // got the answer right. Stop the timer  
+                // and show a MessageBox.
+                timer1.Stop();
+                MessageBox.Show("You got all the answers right!",
+                                "Congratulations!");
+                startButton.Enabled = true;
+            }
+            else if (timeLeft > 0)
+            {
+                // If CheckTheAnswer() returns false, keep counting
+                // down. Decrease the time left by one second and 
+                // display the new time left by updating the 
+                // Time Left label.
+                timeLeft = timeLeft - 1;
+                timeLabel.Text = timeLeft + " seconds";
+            }
+            else
+            {
+                // If the user ran out of time, stop the timer, show
+                // a MessageBox, and fill in the answers.
+                timer1.Stop();
+                timeLabel.Text = "Time's up!";
+                MessageBox.Show("You didn't finish in time.", "Sorry!");
+                sum.Value = addend1 + addend2;
+                difference.Value = minuend - subtrahend;
+                product.Value = multiplicand * multiplier;
+                quotient.Value = dividend / divisor;
+                startButton.Enabled = true;
+            }
         }
     }
 }
