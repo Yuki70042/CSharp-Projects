@@ -45,7 +45,7 @@
             minusRightLabel = new Label();
             label9 = new Label();
             minusLeftLabel = new Label();
-            produit = new NumericUpDown();
+            product = new NumericUpDown();
             label11 = new Label();
             timesRightLabel = new Label();
             label13 = new Label();
@@ -54,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)sum).BeginInit();
             ((System.ComponentModel.ISupportInitialize)quotient).BeginInit();
             ((System.ComponentModel.ISupportInitialize)difference).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)produit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)product).BeginInit();
             SuspendLayout();
             // 
             // timeLabel
@@ -224,13 +224,13 @@
             minusLeftLabel.Text = "?";
             minusLeftLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // produit
+            // product
             // 
-            produit.Font = new Font("Segoe UI", 18F);
-            produit.Location = new Point(338, 171);
-            produit.Name = "produit";
-            produit.Size = new Size(100, 39);
-            produit.TabIndex = 3;
+            product.Font = new Font("Segoe UI", 18F);
+            product.Location = new Point(338, 171);
+            product.Name = "product";
+            product.Size = new Size(100, 39);
+            product.TabIndex = 3;
             // 
             // label11
             // 
@@ -282,6 +282,7 @@
             startButton.TabIndex = 0;
             startButton.Text = "Start the Quiz";
             startButton.UseVisualStyleBackColor = true;
+            startButton.Click += startButton_Click;
             // 
             // Form1
             // 
@@ -289,7 +290,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(480, 357);
             Controls.Add(startButton);
-            Controls.Add(produit);
+            Controls.Add(product);
             Controls.Add(label11);
             Controls.Add(timesRightLabel);
             Controls.Add(label13);
@@ -319,7 +320,7 @@
             ((System.ComponentModel.ISupportInitialize)sum).EndInit();
             ((System.ComponentModel.ISupportInitialize)quotient).EndInit();
             ((System.ComponentModel.ISupportInitialize)difference).EndInit();
-            ((System.ComponentModel.ISupportInitialize)produit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)product).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -343,7 +344,7 @@
         private Label minusRightLabel;
         private Label label9;
         private Label minusLeftLabel;
-        private NumericUpDown produit;
+        private NumericUpDown product;
         private Label label11;
         private Label timesRightLabel;
         private Label label13;

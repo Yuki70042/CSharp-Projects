@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Projet\\C#\\CSharp-Projects\\5.MathQuiz\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0BE4781E-D7ED-47E9-8416-8C7F99E19A4E}|5.MathQuiz\\5.MathQuiz.csproj|d:\\projet\\c#\\csharp-projects\\5.mathquiz\\5.mathquiz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0BE4781E-D7ED-47E9-8416-8C7F99E19A4E}|5.MathQuiz\\5.MathQuiz.csproj|solutionrelative:5.mathquiz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0BE4781E-D7ED-47E9-8416-8C7F99E19A4E}|5.MathQuiz\\5.MathQuiz.csproj|d:\\projet\\c#\\csharp-projects\\5.mathquiz\\5.mathquiz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BE4781E-D7ED-47E9-8416-8C7F99E19A4E}|5.MathQuiz\\5.MathQuiz.csproj|solutionrelative:5.mathquiz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BE4781E-D7ED-47E9-8416-8C7F99E19A4E}|5.MathQuiz\\5.MathQuiz.csproj|d:\\projet\\c#\\csharp-projects\\5.mathquiz\\5.mathquiz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0BE4781E-D7ED-47E9-8416-8C7F99E19A4E}|5.MathQuiz\\5.MathQuiz.csproj|solutionrelative:5.mathquiz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\5.MathQuiz\\5.MathQuiz\\Form1.cs",
               "RelativeDocumentMoniker": "5.MathQuiz\\Form1.cs",
               "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\5.MathQuiz\\5.MathQuiz\\Form1.cs",
               "RelativeToolTip": "5.MathQuiz\\Form1.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAvwBoAAAAAAAAA",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAvwH8AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T18:19:40.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Conception]",
               "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\5.MathQuiz\\5.MathQuiz\\Form1.cs",
               "RelativeDocumentMoniker": "5.MathQuiz\\Form1.cs",
