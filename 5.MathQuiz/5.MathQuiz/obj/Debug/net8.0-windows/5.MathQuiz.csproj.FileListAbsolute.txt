@@ -1,0 +1,17 @@
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\bin\Debug\net8.0-windows\5.MathQuiz.exe
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\bin\Debug\net8.0-windows\5.MathQuiz.deps.json
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\bin\Debug\net8.0-windows\5.MathQuiz.runtimeconfig.json
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\bin\Debug\net8.0-windows\5.MathQuiz.dll
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\bin\Debug\net8.0-windows\5.MathQuiz.pdb
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\_5.MathQuiz.Form1.resources
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\5.MathQuiz.csproj.GenerateResource.cache
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\5.MathQuiz.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\5.MathQuiz.AssemblyInfoInputs.cache
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\5.MathQuiz.AssemblyInfo.cs
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\5.MathQuiz.csproj.CoreCompileInputs.cache
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\5.MathQuiz.sourcelink.json
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\5.MathQuiz.dll
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\refint\5.MathQuiz.dll
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\5.MathQuiz.pdb
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\5.MathQuiz.genruntimeconfig.cache
+D:\Projet\C#\CSharp-Projects\5.MathQuiz\5.MathQuiz\obj\Debug\net8.0-windows\ref\5.MathQuiz.dll
