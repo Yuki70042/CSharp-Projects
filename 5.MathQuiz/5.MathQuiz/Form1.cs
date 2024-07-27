@@ -10,7 +10,11 @@ namespace _5.MathQuiz
         public Form1()
         {
             InitializeComponent();
-            correctSound = new SoundPlayer("D:\\Projet\\C#\\CSharp-Projects\\5.MathQuiz\\Sounds/sucess.wav");
+
+            string soundFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "sucess.wav");
+            correctSound = new SoundPlayer(soundFilePath);
+            
+
             youLost = new SoundPlayer("/Sounds/death.wav");
         }
 
