@@ -10,7 +10,7 @@ namespace _5.MathQuiz
         public Form1()
         {
             InitializeComponent();
-            correctSound = new SoundPlayer("Sounds/sucess.wav");
+            correctSound = new SoundPlayer("D:\\Projet\\C#\\CSharp-Projects\\5.MathQuiz\\Sounds/sucess.wav");
             youLost = new SoundPlayer("/Sounds/death.wav");
         }
 
@@ -262,6 +262,7 @@ namespace _5.MathQuiz
             if (addend1 + addend2 == sum.Value)
             {
                 correctSound.Play();
+                Console.Beep();
             }
         }
 
