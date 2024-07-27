@@ -11,11 +11,14 @@ namespace _5.MathQuiz
         {
             InitializeComponent();
 
-            string soundFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "sucess.wav");
-            correctSound = new SoundPlayer(soundFilePath);
+            string soundFilePathsuccess = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "success.wav");
+            correctSound = new SoundPlayer(soundFilePathsuccess);
             
+            string SoundFilePathdeath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "death.wav");
+            youLost = new SoundPlayer(SoundFilePathdeath);
 
-            youLost = new SoundPlayer("/Sounds/death.wav");
+            string SoundFilePathwin = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "win.wav");
+            youWin = new SoundPlayer(SoundFilePathwin);
         }
 
 
@@ -24,10 +27,10 @@ namespace _5.MathQuiz
         // to generate random number.
         Random randomizer = new Random();
 
-        // This variable is to keep a sound for the correct 
-        // answer !
-        private SoundPlayer correctSound;
-        private SoundPlayer youLost;
+        // This variables keep some sounds for differents effect !
+        private SoundPlayer correctSound; // the user give a correct answer
+        private SoundPlayer youLost;      // The user lost 
+        private SoundPlayer youWin;       // The user win
 
 
         //          -----------                      initialize the variables
@@ -54,17 +57,7 @@ namespace _5.MathQuiz
         // This integer variable keeps track of the
         // remaining time.
         int timeLeft;
-
-
-
-
-
         //                        ------------------     
-
-
-
-
-
 
         public void StartTheQuiz()
         /* 
@@ -173,8 +166,9 @@ namespace _5.MathQuiz
                 // got the answer right. Stop the timer  
                 // and show a MessageBox.
                 timer1.Stop();
+                youWin.Play();
                 timeLabel.BackColor = Color.Green;
-                MessageBox.Show("You got all the answers right!",
+                MessageBox.Show("You got all the answers right! \u263A",
                                 "Congratulations!");
                 startButton.Enabled = true;
 
@@ -199,6 +193,7 @@ namespace _5.MathQuiz
                 // a MessageBox, and fill in the answers.
                 timer1.Stop();
                 timeLabel.Text = "Time's up!";
+                youLost.Play();
                 MessageBox.Show("You didn't finish in time.", "Sorry!");
                 sum.Value = addend1 + addend2;
                 difference.Value = minuend - subtrahend;
@@ -266,7 +261,6 @@ namespace _5.MathQuiz
             if (addend1 + addend2 == sum.Value)
             {
                 correctSound.Play();
-                Console.Beep();
             }
         }
 

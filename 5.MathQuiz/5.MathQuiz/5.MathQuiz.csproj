@@ -10,11 +10,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Sounds\sucess.wav" />
+    <None Remove="Sounds\death.wav" />
+    <None Remove="Sounds\success.wav" />
+    <None Remove="Sounds\win.wav" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Sounds\sucess.wav">
+    <Content Include="Sounds\death.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\success.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\win.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
