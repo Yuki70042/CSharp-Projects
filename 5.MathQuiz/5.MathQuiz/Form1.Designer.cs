@@ -128,6 +128,7 @@
             sum.TabIndex = 1;
             sum.ValueChanged += sum_ValueChanged;
             sum.Enter += answer_Enter;
+            sum.KeyDown += sum_KeyDown;
             // 
             // quotient
             // 
@@ -138,6 +139,7 @@
             quotient.TabIndex = 4;
             quotient.ValueChanged += quotient_ValueChanged;
             quotient.Enter += quotient_Enter;
+            quotient.KeyDown += quotient_KeyDown;
             // 
             // label2
             // 
@@ -188,6 +190,7 @@
             difference.TabIndex = 2;
             difference.ValueChanged += difference_ValueChanged;
             difference.Enter += difference_Enter;
+            difference.KeyDown += difference_KeyDown;
             // 
             // label7
             // 
@@ -238,6 +241,7 @@
             product.TabIndex = 3;
             product.ValueChanged += product_ValueChanged;
             product.Enter += product_Enter;
+            product.KeyDown += product_KeyDown;
             // 
             // label11
             // 
@@ -328,7 +332,6 @@
             MaximizeBox = false;
             Name = "Form1";
             Text = "MathQuiz";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)sum).EndInit();
             ((System.ComponentModel.ISupportInitialize)quotient).EndInit();
             ((System.ComponentModel.ISupportInitialize)difference).EndInit();

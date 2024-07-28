@@ -13,7 +13,7 @@ namespace _5.MathQuiz
 
             string soundFilePathsuccess = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "success.wav");
             correctSound = new SoundPlayer(soundFilePathsuccess);
-            
+
             string SoundFilePathdeath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "death.wav");
             youLost = new SoundPlayer(SoundFilePathdeath);
 
@@ -142,21 +142,13 @@ namespace _5.MathQuiz
         }
 
 
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void startButton_Click(object sender, EventArgs e)
         {
             timeLabel.BackColor = Color.White;
             StartTheQuiz();
             startButton.Enabled = false;
         }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -191,14 +183,18 @@ namespace _5.MathQuiz
             {
                 // If the user ran out of time, stop the timer, show
                 // a MessageBox, and fill in the answers.
+
                 timer1.Stop();
-                timeLabel.Text = "Time's up!";
                 youLost.Play();
-                MessageBox.Show("You didn't finish in time.", "Sorry!");
                 sum.Value = addend1 + addend2;
                 difference.Value = minuend - subtrahend;
                 product.Value = multiplicand * multiplier;
                 quotient.Value = dividend / divisor;
+                
+                timeLabel.Text = "Time's up!";
+                MessageBox.Show("You didn't finish in time.", "Sorry!");
+                
+                // allows the player to replay
                 startButton.Enabled = true;
             }
         }
@@ -285,6 +281,46 @@ namespace _5.MathQuiz
             if (dividend / divisor == quotient.Value)
             {
                 correctSound.Play();
+            }
+        }
+
+        private void sum_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Management of form keys for sum
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // remove the beep
+                SendKeys.Send("{TAB}"); // Simulates the tab key
+            }
+        }
+
+        private void difference_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Management of form keys for difference
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // remove the beep
+                SendKeys.Send("{TAB}"); // Simulates the tab key
+            }
+        }
+
+        private void product_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Management of form keys for product
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // remove the beep
+                SendKeys.Send("{TAB}"); // Simulates the tab key
+            }
+        }
+
+        private void quotient_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Management of form keys for quotient
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // remove the beep
+                SendKeys.Send("{TAB}"); // Simulates the tab key
             }
         }
     }
