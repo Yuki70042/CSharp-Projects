@@ -16,5 +16,10 @@ namespace _6.Memory_Game
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
