@@ -1,0 +1,10 @@
+D:\Projet\C#\CSharp-Projects\6. Memory Game\6. Memory Game\bin\Debug\_6.Memory_Game.exe.config
+D:\Projet\C#\CSharp-Projects\6. Memory Game\6. Memory Game\bin\Debug\_6.Memory_Game.exe
+D:\Projet\C#\CSharp-Projects\6. Memory Game\6. Memory Game\bin\Debug\_6.Memory_Game.pdb
+D:\Projet\C#\CSharp-Projects\6. Memory Game\6. Memory Game\obj\Debug\6. Memory Game.csproj.AssemblyReference.cache
+D:\Projet\C#\CSharp-Projects\6. Memory Game\6. Memory Game\obj\Debug\_6.Memory_Game.Form1.resources
+D:\Projet\C#\CSharp-Projects\6. Memory Game\6. Memory Game\obj\Debug\_6.Memory_Game.Properties.Resources.resources
+D:\Projet\C#\CSharp-Projects\6. Memory Game\6. Memory Game\obj\Debug\6. Memory Game.csproj.GenerateResource.cache
+D:\Projet\C#\CSharp-Projects\6. Memory Game\6. Memory Game\obj\Debug\6. Memory Game.csproj.CoreCompileInputs.cache
+D:\Projet\C#\CSharp-Projects\6. Memory Game\6. Memory Game\obj\Debug\_6.Memory_Game.exe
+D:\Projet\C#\CSharp-Projects\6. Memory Game\6. Memory Game\obj\Debug\_6.Memory_Game.pdb
