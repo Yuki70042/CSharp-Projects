@@ -22,6 +22,7 @@ namespace _6.Memory_Game
         // Create a soundplayer object to play a sound if the player win the game
         private SoundPlayer winSound;
         private SoundPlayer makePairSound;
+        private SoundPlayer turnCardSound;
 
 
         //Each of these letters is an interesting icon
@@ -76,6 +77,9 @@ namespace _6.Memory_Game
             string soundFilePathmakePair = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "makePair.wav");
             makePairSound = new SoundPlayer(soundFilePathmakePair);
 
+            string soundFilePathturnCard = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "turncard.wav");
+            turnCardSound = new SoundPlayer(soundFilePathturnCard);
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -97,6 +101,7 @@ namespace _6.Memory_Game
                 if (firstClicked == null)
                 {
                     firstClicked = clickedLabel;
+                    turnCardSound.Play();
                     firstClicked.ForeColor = Color.Black;
 
                     return;
@@ -107,6 +112,7 @@ namespace _6.Memory_Game
                 // so this must be the second icon the player clicked
                 // Set its color to black
                 secondClicked = clickedLabel;
+                turnCardSound.Play();
                 secondClicked.ForeColor = Color.Black;
 
                 // Check to see if the player won
