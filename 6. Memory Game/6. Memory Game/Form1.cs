@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,13 +19,18 @@ namespace _6.Memory_Game
         // Use this Random object to choose random icons for the squares
         Random random = new Random();
 
+        // Create a soundplayer object to play a sound if the player win the game
+        private SoundPlayer winSound;
+        private SoundPlayer makePairSound;
+
+
         //Each of these letters is an interesting icon
         // In the Webdings font,
         // and each icon appears twice in this list
         List<string> icons = new List<string>()
             {
-                "!", "!", "N", "N", ",", ",", "k", "k",
-                "b", "b", "v", "v", "w", "w", "z", "z"
+                "!", "!", "N", "N", ",", ",", "k", "k", "o", "o", "r", "r",
+                "b", "b", "v", "v", "w", "w", "z", "z", "e", "e", "l", "l",
             };
 
 
@@ -59,8 +66,16 @@ namespace _6.Memory_Game
 
         public Form1()
         {
+
             InitializeComponent();
             AssignIconsToSquares();
+
+            string soundFilePathwin = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "win.wav");
+            winSound = new SoundPlayer(soundFilePathwin);
+
+            string soundFilePathmakePair = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "makePair.wav");
+            makePairSound = new SoundPlayer(soundFilePathmakePair);
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -104,6 +119,7 @@ namespace _6.Memory_Game
                 {
                     firstClicked = null;
                     secondClicked = null;
+                    makePairSound.Play();
                     return;
                 }
 
@@ -150,10 +166,15 @@ namespace _6.Memory_Game
             // If the loop didn’t return, it didn't find
             // any unmatched icons
             // That means the user won. Show a message and close the form
+            winSound.Play();
             MessageBox.Show("You matched all the icons!", "Congratulations");
             Close();
         }
 
+        private void label1Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
