@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Projet\\C#\\CSharp-Projects\\7.Tic-Tac-Toe\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{832131B2-4C21-4B5C-B92B-5434B88615FC}|7.Tic-Tac-Toe\\7.Tic-Tac-Toe.csproj|d:\\projet\\c#\\csharp-projects\\7.tic-tac-toe\\7.tic-tac-toe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{832131B2-4C21-4B5C-B92B-5434B88615FC}|7.Tic-Tac-Toe\\7.Tic-Tac-Toe.csproj|solutionrelative:7.tic-tac-toe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{832131B2-4C21-4B5C-B92B-5434B88615FC}|7.Tic-Tac-Toe\\7.Tic-Tac-Toe.csproj|d:\\projet\\c#\\csharp-projects\\7.tic-tac-toe\\7.tic-tac-toe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{832131B2-4C21-4B5C-B92B-5434B88615FC}|7.Tic-Tac-Toe\\7.Tic-Tac-Toe.csproj|solutionrelative:7.tic-tac-toe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\7.Tic-Tac-Toe\\7.Tic-Tac-Toe\\Form1.cs",
+              "RelativeDocumentMoniker": "7.Tic-Tac-Toe\\Form1.cs",
+              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\7.Tic-Tac-Toe\\7.Tic-Tac-Toe\\Form1.cs",
+              "RelativeToolTip": "7.Tic-Tac-Toe\\Form1.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T17:54:03.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\7.Tic-Tac-Toe\\7.Tic-Tac-Toe\\Form1.cs",
               "RelativeDocumentMoniker": "7.Tic-Tac-Toe\\Form1.cs",

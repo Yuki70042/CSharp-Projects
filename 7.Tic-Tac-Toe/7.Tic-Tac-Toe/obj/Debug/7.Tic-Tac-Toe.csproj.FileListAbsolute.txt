@@ -1,0 +1,10 @@
+D:\Projet\C#\CSharp-Projects\7.Tic-Tac-Toe\7.Tic-Tac-Toe\bin\Debug\7.Tic-Tac-Toe.exe.config
+D:\Projet\C#\CSharp-Projects\7.Tic-Tac-Toe\7.Tic-Tac-Toe\bin\Debug\7.Tic-Tac-Toe.exe
+D:\Projet\C#\CSharp-Projects\7.Tic-Tac-Toe\7.Tic-Tac-Toe\bin\Debug\7.Tic-Tac-Toe.pdb
+D:\Projet\C#\CSharp-Projects\7.Tic-Tac-Toe\7.Tic-Tac-Toe\obj\Debug\7.Tic-Tac-Toe.csproj.AssemblyReference.cache
+D:\Projet\C#\CSharp-Projects\7.Tic-Tac-Toe\7.Tic-Tac-Toe\obj\Debug\_7.Tic_Tac_Toe.Form1.resources
+D:\Projet\C#\CSharp-Projects\7.Tic-Tac-Toe\7.Tic-Tac-Toe\obj\Debug\_7.Tic_Tac_Toe.Properties.Resources.resources
+D:\Projet\C#\CSharp-Projects\7.Tic-Tac-Toe\7.Tic-Tac-Toe\obj\Debug\7.Tic-Tac-Toe.csproj.GenerateResource.cache
+D:\Projet\C#\CSharp-Projects\7.Tic-Tac-Toe\7.Tic-Tac-Toe\obj\Debug\7.Tic-Tac-Toe.csproj.CoreCompileInputs.cache
+D:\Projet\C#\CSharp-Projects\7.Tic-Tac-Toe\7.Tic-Tac-Toe\obj\Debug\7.Tic-Tac-Toe.exe
+D:\Projet\C#\CSharp-Projects\7.Tic-Tac-Toe\7.Tic-Tac-Toe\obj\Debug\7.Tic-Tac-Toe.pdb
