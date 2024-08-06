@@ -15,8 +15,9 @@ A set of my programs done in 2024 to learn c#
 - A clock
 - To do list App (With save)
 - Text Editor
--  Simple Chat App
+- Simple Chat App
 - Password manager
+- Keylogger
 - Flappy Bird
 - Pong Game
 - Snake
