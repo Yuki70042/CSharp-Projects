@@ -1,6 +1,5 @@
 # CSharp-Projects
-A set of my programs to learn c#
-
+A set of my programs done in 2024 to learn c#
 
 1. Calculator (2024/07/12)
 2. A Little Dice Game (2024/07/13)
@@ -9,3 +8,12 @@ A set of my programs to learn c#
 5. MathQuiz (2024/07/24 - 2024/07/28)
 6. Memory Game (2024/07/29 - 2024/08/01)
 7. Tic Tac Toe Game (with IA) (2024/07/02 - 2024/08/dd) 
+
+  
+## Project Ideas
+
+- To do list App
+- Simple Chat App
+- Flappy Bird
+- Pong Game
+- Snake
