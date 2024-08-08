@@ -1,0 +1,10 @@
+C:\Projet\GitHub\CSharp-Projects\9. Pong\9. Pong\bin\Debug\_9.Pong.exe.config
+C:\Projet\GitHub\CSharp-Projects\9. Pong\9. Pong\bin\Debug\_9.Pong.exe
+C:\Projet\GitHub\CSharp-Projects\9. Pong\9. Pong\bin\Debug\_9.Pong.pdb
+C:\Projet\GitHub\CSharp-Projects\9. Pong\9. Pong\obj\Debug\9. Pong.csproj.AssemblyReference.cache
+C:\Projet\GitHub\CSharp-Projects\9. Pong\9. Pong\obj\Debug\_9.Pong.Form1.resources
+C:\Projet\GitHub\CSharp-Projects\9. Pong\9. Pong\obj\Debug\_9.Pong.Properties.Resources.resources
+C:\Projet\GitHub\CSharp-Projects\9. Pong\9. Pong\obj\Debug\9. Pong.csproj.GenerateResource.cache
+C:\Projet\GitHub\CSharp-Projects\9. Pong\9. Pong\obj\Debug\9. Pong.csproj.CoreCompileInputs.cache
+C:\Projet\GitHub\CSharp-Projects\9. Pong\9. Pong\obj\Debug\_9.Pong.exe
+C:\Projet\GitHub\CSharp-Projects\9. Pong\9. Pong\obj\Debug\_9.Pong.pdb
