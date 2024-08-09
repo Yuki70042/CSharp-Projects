@@ -14,10 +14,9 @@ namespace _7.Tic_Tac_Toe
     {
         public Form1()
         {
-
             InitializeComponent();          
-            MessageBox.Show("Hi Player, I'm zero the new IA." , "Zero");
-            MessageBox.Show(" Can you beat me? You are the circle...", "Good Luck");
+            MessageBox.Show("Hi Player, I'm Xero the new AI." , "Xero");
+            MessageBox.Show("Can you beat me? You start with the circle...", "Good Luck");
         }
 
         private string currentPlayer = "O";
@@ -54,6 +53,10 @@ namespace _7.Tic_Tac_Toe
 
                     // Switch to the next player
                     SwitchPlayer();
+                    if (AIMode)
+                    {
+                        AITurn();
+                    }
                 }
                 else
                 {
@@ -85,7 +88,6 @@ namespace _7.Tic_Tac_Toe
         private void RestartButton_Click(object sender, EventArgs e)
         // When the restart button is click, clear the gameboard
         {
-
             ClearBoard();
         }
 
@@ -108,10 +110,42 @@ namespace _7.Tic_Tac_Toe
             }
         }
 
+        private void AITurn()
+        {
+
+        }
+
 
         private void CheckForWinner()
         {
+            
+            /* Button[,] grid = new Button[3, 3];
+            // A table of all win combination
+            {
+                { 1, 2, 3},
+                { 4, 5, 6}, // Lines
+                { 7, 8, 9},
 
+                { 1, 4, 7},
+                { 2, 5, 8}, // Columns
+                { 3, 6, 9},
+
+                { 1, 5, 9}, // diagonals
+                { 3, 5, 7},
+            };
+            */
+        }
+
+
+        private bool CheckLine(Button a, Button b, Button c)
+        {
+            return a.Text == b.Text && b.Text == c.Text && !string.IsNullOrEmpty(a.Text);
+        }
+
+        private bool BoardIsFull()
+        {
+            
+            return false;
         }
 
         private void ClearBoard()

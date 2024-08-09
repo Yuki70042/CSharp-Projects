@@ -42,6 +42,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.RestartButton = new System.Windows.Forms.Button();
             this.ChangeMode = new System.Windows.Forms.Button();
+            this.InformationsText = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -217,6 +218,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.69565F));
             this.tableLayoutPanel3.Controls.Add(this.RestartButton, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.ChangeMode, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.InformationsText, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 439);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -249,6 +251,20 @@
             this.ChangeMode.UseVisualStyleBackColor = false;
             this.ChangeMode.Click += new System.EventHandler(this.ChangeMode_Click);
             // 
+            // InformationsText
+            // 
+            this.InformationsText.AutoSize = true;
+            this.InformationsText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InformationsText.Font = new System.Drawing.Font("Myanmar Text", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InformationsText.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.InformationsText.Location = new System.Drawing.Point(157, 3);
+            this.InformationsText.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.InformationsText.Name = "InformationsText";
+            this.InformationsText.Size = new System.Drawing.Size(142, 65);
+            this.InformationsText.TabIndex = 2;
+            this.InformationsText.Text = "Player Turn";
+            this.InformationsText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,6 +279,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,6 +301,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button ChangeMode;
+        private System.Windows.Forms.Label InformationsText;
     }
 }
 
