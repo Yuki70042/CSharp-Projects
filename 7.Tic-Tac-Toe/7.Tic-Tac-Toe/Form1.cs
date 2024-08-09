@@ -14,21 +14,30 @@ namespace _7.Tic_Tac_Toe
     {
         public Form1()
         {
-            InitializeComponent();          
+            InitializeComponent();
+            InitializeButtons();
             MessageBox.Show("Hi Player, I'm Xero the new AI." , "Xero");
-            MessageBox.Show("Can you beat me? You start with the circle...", "Good Luck");
+            MessageBox.Show("Can you beat me? \nYou start with the circle...", "Good Luck");
         }
 
         private string currentPlayer = "O";
         string symbol = "n";
         bool AIMode = true;
 
+        private Button[] buttons;
+        Random random = new Random(); // A random object for the IA turn
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+ 
+        private void InitializeButtons()
         {
-
+            // Assure-toi que tous les boutons sont correctement nommés dans le designer
+            buttons = new Button[]
+            {
+                button1, button2, button3,
+                button4, button5, button6,
+                button7, button8, button9
+            };
         }
-
 
         // ------------ Events Part and main game
 
@@ -53,17 +62,16 @@ namespace _7.Tic_Tac_Toe
 
                     // Switch to the next player
                     SwitchPlayer();
-                    if (AIMode)
-                    {
-                        AITurn();
-                    }
+                  
+                    // If AI mode, allows the cpu to play
+                    AITurn();
+                    
                 }
-                else
+                else // If the case already has a symbol inside
                 {
                     MessageBox.Show("The case is already taken... ");
                 }
             }
-
         }
 
 
@@ -77,11 +85,13 @@ namespace _7.Tic_Tac_Toe
                 ChangeMode.Text = "Play with AI";
                 AIMode = false;
                 ClearBoard();
+                MessageBox.Show("You are now in 2 Player mod");
             }
             else
             {
                 ChangeMode.Text = "Play with Player 2";
                 ClearBoard();
+                MessageBox.Show("You are playing now against the AI");
             }
         }
 
@@ -98,45 +108,88 @@ namespace _7.Tic_Tac_Toe
         private void SwitchPlayer()
         {
             // Alternate between X and O
-            if (currentPlayer == "X")
+
+            if (AIMode) // If AI Mode is active
             {
-                currentPlayer = "O";
-                symbol = "n";
+                if (currentPlayer == "Xero")
+                {
+                    currentPlayer = "Player1";
+                    symbol = "n"; // 0 symbol
+                }
+                else
+                {
+                    currentPlayer = "Xero";
+                    symbol = "r"; // X symbol
+                }
             }
-            else
+            else // Two Player Mod
             {
-                currentPlayer = "X";
-                symbol = "r";
+                if (currentPlayer == "Player2")
+                {
+                    currentPlayer = "Player1";
+                    symbol = "n"; // 0 symbol
+                }
+                else
+                {
+                    currentPlayer = "Player2";
+                    symbol = "r"; // X symbol
+                }
             }
         }
 
+
         private void AITurn()
         {
+            if (AIMode)
+            {
 
+            }
         }
 
 
         private void CheckForWinner()
-        {
-            
-            /* Button[,] grid = new Button[3, 3];
-            // A table of all win combination
+        { 
+            // A table of all win combinations
+            int[,] winningCombinations = new int[,]
             {
-                { 1, 2, 3},
-                { 4, 5, 6}, // Lines
-                { 7, 8, 9},
+                { 0, 1, 2},
+                { 3, 4, 5}, // Lines
+                { 6, 7, 8},
 
-                { 1, 4, 7},
-                { 2, 5, 8}, // Columns
-                { 3, 6, 9},
+                { 0, 3, 6},
+                { 1, 4, 7}, // Columns
+                { 2, 5, 8},
 
-                { 1, 5, 9}, // diagonals
-                { 3, 5, 7},
+                { 0, 4, 8}, // diagonals
+                { 2, 4, 6},
             };
-            */
+            
+            // Check all the combinations
+            for (int i = 0; i < winningCombinations.GetLength(0); i++)
+            {
+                int index1 = winningCombinations[i, 0];
+                int index2 = winningCombinations[i, 1];
+                int index3 = winningCombinations[i, 2];
+
+
+                if (index1 >= buttons.Length || index2 >= buttons.Length || index3 >= buttons.Length)
+                {
+                    MessageBox.Show($"Index out of bounds: {index1}, {index2}, {index3}");
+                    continue;
+                }
+
+                if (CheckLine(buttons[index1], buttons[index2], buttons[index3]))
+                {
+                    MessageBox.Show($"{currentPlayer} you Win!");
+                    return;
+                }
+            }
+            if (BoardIsFull())
+            {
+                MessageBox.Show("It's a Draw!");
+            }
+
         }
-
-
         private bool CheckLine(Button a, Button b, Button c)
         {
             return a.Text == b.Text && b.Text == c.Text && !string.IsNullOrEmpty(a.Text);
@@ -144,8 +197,12 @@ namespace _7.Tic_Tac_Toe
 
         private bool BoardIsFull()
         {
-            
-            return false;
+            foreach (Button button in buttons)
+            {
+                if (string.IsNullOrEmpty(button.Text))
+                    return false; // Some buttons are empty
+            }
+            return true; // the board is full
         }
 
         private void ClearBoard()
@@ -162,8 +219,5 @@ namespace _7.Tic_Tac_Toe
                 }
             }
         }
-
-
-
     }
 }
