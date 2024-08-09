@@ -20,7 +20,7 @@ namespace _7.Tic_Tac_Toe
             MessageBox.Show("Can you beat me? \nYou start with the circle...", "Good Luck");
         }
 
-        private string currentPlayer = "O";
+        private string currentPlayer = "Player";
         string symbol = "n";
         bool AIMode = true;
 
@@ -30,7 +30,7 @@ namespace _7.Tic_Tac_Toe
  
         private void InitializeButtons()
         {
-            // Assure-toi que tous les boutons sont correctement nommés dans le designer
+            // Initializong the different buttons in a table 
             buttons = new Button[]
             {
                 button1, button2, button3,
@@ -85,7 +85,10 @@ namespace _7.Tic_Tac_Toe
                 ChangeMode.Text = "Play with AI";
                 AIMode = false;
                 ClearBoard();
+                currentPlayer = "Player1";
+                symbol = "n";
                 MessageBox.Show("You are now in 2 Player mod");
+
             }
             else
             {
@@ -101,7 +104,6 @@ namespace _7.Tic_Tac_Toe
             ClearBoard();
         }
 
-
         // ---------------- End of event Part
 
 
@@ -113,26 +115,31 @@ namespace _7.Tic_Tac_Toe
             {
                 if (currentPlayer == "Xero")
                 {
-                    currentPlayer = "Player1";
+                    currentPlayer = "Player";
                     symbol = "n"; // 0 symbol
+                    InformationsText.Text = "Player Turn";
                 }
                 else
                 {
                     currentPlayer = "Xero";
                     symbol = "r"; // X symbol
+                    InformationsText.Text = "Xero Turn";
                 }
             }
+
             else // Two Player Mod
             {
                 if (currentPlayer == "Player2")
                 {
                     currentPlayer = "Player1";
                     symbol = "n"; // 0 symbol
+                    InformationsText.Text = "Player1 Turn";
                 }
                 else
                 {
                     currentPlayer = "Player2";
                     symbol = "r"; // X symbol
+                    InformationsText.Text = "Player2 Turn";
                 }
             }
         }
@@ -145,7 +152,6 @@ namespace _7.Tic_Tac_Toe
 
             }
         }
-
 
         private void CheckForWinner()
         { 
@@ -170,13 +176,6 @@ namespace _7.Tic_Tac_Toe
                 int index1 = winningCombinations[i, 0];
                 int index2 = winningCombinations[i, 1];
                 int index3 = winningCombinations[i, 2];
-
-
-                if (index1 >= buttons.Length || index2 >= buttons.Length || index3 >= buttons.Length)
-                {
-                    MessageBox.Show($"Index out of bounds: {index1}, {index2}, {index3}");
-                    continue;
-                }
 
                 if (CheckLine(buttons[index1], buttons[index2], buttons[index3]))
                 {
