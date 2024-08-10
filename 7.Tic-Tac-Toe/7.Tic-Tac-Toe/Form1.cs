@@ -20,10 +20,11 @@ namespace _7.Tic_Tac_Toe
             MessageBox.Show("Can you beat me? \nYou start with the circle...", "Good Luck");
         }
 
+        // ----------  Initialisation variables
         private string currentPlayer = "Player";
         string symbol = "n";
+        bool winner = false;
         bool AIMode = true;
-
         private Button[] buttons;
         Random random = new Random(); // A random object for the IA turn
 
@@ -38,6 +39,7 @@ namespace _7.Tic_Tac_Toe
                 button7, button8, button9
             };
         }
+
 
         // ------------ Events Part and main game
 
@@ -82,7 +84,7 @@ namespace _7.Tic_Tac_Toe
             
             if (ChangeMode.Text == "Play with Player 2")
             {
-                ChangeMode.Text = "Play with AI";
+                ChangeMode.Text = "Play with AI";               
                 AIMode = false;
                 ClearBoard();
                 currentPlayer = "Player1";
@@ -93,15 +95,24 @@ namespace _7.Tic_Tac_Toe
             else
             {
                 ChangeMode.Text = "Play with Player 2";
+                currentPlayer = "Player1";
+                symbol = "n";
                 ClearBoard();
-                MessageBox.Show("You are playing now against the AI");
+                AIMode = true;
+                MessageBox.Show("You are playing now against the AI. \nYou start with \"O\"");
             }
+
+            InformationsText.Text = "Player1 turn";
+            winner = false;
+            ActivateBoardButtons();
         }
 
         private void RestartButton_Click(object sender, EventArgs e)
         // When the restart button is click, clear the gameboard
         {
+            winner = false;
             ClearBoard();
+            ActivateBoardButtons();
         }
 
         // ---------------- End of event Part
@@ -145,16 +156,34 @@ namespace _7.Tic_Tac_Toe
         }
 
 
-        private void AITurn()
+        private async void AITurn()
         {
             if (AIMode)
             {
+                await Task.Delay(1000);
+                bool SymboleIsOk = false; // Is the AI action ok?
+                int index = 0; // number of the case of AI Action
 
+                while (!SymboleIsOk && !winner) // while the AI action is not valid
+                {
+                    index = random.Next(0, 9); // generate a random number for the AI action
+
+                    if (string.IsNullOrEmpty(buttons[index].Text) || BoardIsFull())
+                        // if the case free, add the symbole. 
+                        // if it's a draw, pass the AI turn
+                    {
+                        buttons[index].Text = symbol; // The AI add the symbole in a random case
+                        SymboleIsOk = true; // AI turn finish
+                        CheckForWinner();
+                    }
+                }
+                SwitchPlayer();
             }
         }
 
         private void CheckForWinner()
         { 
+            
             // A table of all win combinations
             int[,] winningCombinations = new int[,]
             {
@@ -180,15 +209,35 @@ namespace _7.Tic_Tac_Toe
                 if (CheckLine(buttons[index1], buttons[index2], buttons[index3]))
                 {
                     MessageBox.Show($"{currentPlayer} you Win!");
+                    winner = true;
+                    DisableBoardButtons();
                     return;
                 }
             }
             if (BoardIsFull())
             {
+                DisableBoardButtons();
                 MessageBox.Show("It's a Draw!");
             }
 
         }
+
+        private void DisableBoardButtons()
+        {
+            foreach (Button button in buttons)
+            {
+                button.Enabled = false; // Disable each button
+            }
+        }
+
+        private void ActivateBoardButtons()
+        {
+            foreach (Button button in buttons)
+            {
+                button.Enabled = true; // Disable each button
+            }
+        }
+
         private bool CheckLine(Button a, Button b, Button c)
         {
             return a.Text == b.Text && b.Text == c.Text && !string.IsNullOrEmpty(a.Text);
