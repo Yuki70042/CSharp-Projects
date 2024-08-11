@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,17 +22,18 @@ namespace _7.Tic_Tac_Toe
         }
 
         // ----------  Initialisation variables
+        Random random = new Random(); // A random object for the IA turn
+        private Button[] buttons;
         private string currentPlayer = "Player";
         string symbol = "n";
+        string opponentSymbol = "r";
         bool winner = false;
         bool AIMode = true;
-        private Button[] buttons;
-        Random random = new Random(); // A random object for the IA turn
 
- 
+
         private void InitializeButtons()
         {
-            // Initializong the different buttons in a table 
+            // Initializing the different buttons in a table 
             buttons = new Button[]
             {
                 button1, button2, button3,
@@ -56,26 +58,30 @@ namespace _7.Tic_Tac_Toe
                 // Checks if the case isn't already taken by a symbol
                 if (string.IsNullOrEmpty(clickedButton.Text))
                 {
-                    // If the case is free, add the current symbol
                     clickedButton.Text = symbol;
-
-                    // Check if someone  has won the game
                     CheckForWinner();
+                    if (!winner) // Ensure the game is not over
+                    {
+                        SwitchPlayer();
 
-                    // Switch to the next player
-                    SwitchPlayer();
-                  
-                    // If AI mode, allows the cpu to play
-                    AITurn();
-                    
+                        if (AIMode && !winner) // If AI mode is active and the game isn't over
+                        {
+                            AITurnMinimax(); // AI takes its turn
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Win");
+                    }
                 }
+
                 else // If the case already has a symbol inside
                 {
                     MessageBox.Show("The case is already taken... ");
                 }
             }
         }
-
 
 
         private void ChangeMode_Click(object sender, EventArgs e)
@@ -129,6 +135,7 @@ namespace _7.Tic_Tac_Toe
                     currentPlayer = "Player";
                     symbol = "n"; // 0 symbol
                     InformationsText.Text = "Player Turn";
+                    AIMode = false;
                 }
                 else
                 {
@@ -156,11 +163,11 @@ namespace _7.Tic_Tac_Toe
         }
 
 
-        private async void AITurn()
+        private async void AITurnRandom()
         {
             if (AIMode)
             {
-                await Task.Delay(1000);
+                await Task.Delay(400);
                 bool SymboleIsOk = false; // Is the AI action ok?
                 int index = 0; // number of the case of AI Action
 
@@ -181,7 +188,93 @@ namespace _7.Tic_Tac_Toe
             }
         }
 
-        private void CheckForWinner()
+        private void AITurnMinimax()
+        {
+            if (AIMode)
+            {
+                int bestValue = int.MinValue;
+                int bestMove = -1;
+
+                for (int i = 0; i < buttons.Length; i++)
+                {
+                    if (string.IsNullOrEmpty(buttons[i].Text))
+                    {
+                        buttons[i].Text = symbol;
+                        int moveVal = Minimax(0, false);
+                        buttons[i].Text = string.Empty;
+
+                        if (moveVal > bestValue)
+                        {
+                            bestMove = i;
+                            bestValue = moveVal;
+                        }
+                    }
+                }
+
+                // Make the best move
+                if (bestMove != -1)
+                {
+                    buttons[bestMove].Text = symbol;
+                    CheckForWinner();
+                    SwitchPlayer(); // Move to the next player
+                }
+            }
+        }
+
+
+        private int Minimax(int depth, bool isMaximizing) // Minimax Algorithm
+        {
+
+            int score = CheckForWinner(); 
+            // Check the Board status 
+
+            if (score != -1)  // -1 indicates the game is still ongoing
+            {
+                return score;
+            }
+
+            if (isMaximizing) 
+                // If AI want to have the score Max
+            {
+                int best = int.MinValue;
+
+                for (int i = 0; i < buttons.Length; i++)
+                    // Foreach buttons, simulate all possible moves
+                {
+                    if (string.IsNullOrEmpty(buttons[i].Text)) // Check if buttons is free
+                    {
+                        buttons[i].Text = symbol; // simulate the move
+
+                        /* recursively calls the new board create
+                         * increase the depth of the tree and !isMaximizing 
+                         * reverse role (search the best move for the player)
+                         * Math.Max keep the best move find */
+                        best = Math.Max(best, Minimax(depth + 1, !isMaximizing));                        
+                        buttons[i].Text = string.Empty; // reset the move 
+                    }
+                }
+                return best; // Return the best (Max) move find
+            }
+
+            else // Search 
+            {
+                int best = int.MaxValue;
+
+                // Iterate through all possible moves
+                for (int i = 0; i < buttons.Length; i++)
+                {
+                    if (string.IsNullOrEmpty(buttons[i].Text))
+                    {
+                        buttons[i].Text = opponentSymbol;
+                        best = Math.Min(best, Minimax(depth + 1, !isMaximizing));
+                        buttons[i].Text = string.Empty;
+                    }
+                }
+                return best;
+            }
+        }
+
+        private int CheckForWinner()
         { 
             
             // A table of all win combinations
@@ -208,18 +301,27 @@ namespace _7.Tic_Tac_Toe
 
                 if (CheckLine(buttons[index1], buttons[index2], buttons[index3]))
                 {
-                    MessageBox.Show($"{currentPlayer} you Win!");
-                    winner = true;
-                    DisableBoardButtons();
-                    return;
+                    if (buttons[index1].Text == "r") // Example for "X"
+                    {
+                        DisableBoardButtons();
+                        return 10; // Value for "X" win
+                    }
+
+                    else if (buttons[index1].Text == "n") // Example for "O"
+                    {
+                        DisableBoardButtons();
+                        return -10; // Value for "O" win
+                    }
                 }
             }
             if (BoardIsFull())
             {
                 DisableBoardButtons();
-                MessageBox.Show("It's a Draw!");
+                // MessageBox.Show("It's a Draw !");
+                return 0;
             }
 
+            return -1; // Game is still ongoing
         }
 
         private void DisableBoardButtons()
@@ -230,6 +332,7 @@ namespace _7.Tic_Tac_Toe
             }
         }
 
+
         private void ActivateBoardButtons()
         {
             foreach (Button button in buttons)
@@ -238,10 +341,12 @@ namespace _7.Tic_Tac_Toe
             }
         }
 
+
         private bool CheckLine(Button a, Button b, Button c)
         {
             return a.Text == b.Text && b.Text == c.Text && !string.IsNullOrEmpty(a.Text);
         }
+
 
         private bool BoardIsFull()
         {
@@ -252,6 +357,7 @@ namespace _7.Tic_Tac_Toe
             }
             return true; // the board is full
         }
+
 
         private void ClearBoard()
         //A method to clear the game board
@@ -267,5 +373,6 @@ namespace _7.Tic_Tac_Toe
                 }
             }
         }
+
     }
 }
