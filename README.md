@@ -21,3 +21,5 @@ A set of my programs done in 2024 to learn c#
 - Flappy Bird
 - Snake
 - A space shooting game
+- Interactive story-telling
+- Password Generator
