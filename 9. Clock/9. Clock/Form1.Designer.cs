@@ -37,9 +37,9 @@
             this.StopWatch_Button = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.timeLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.timerclock = new System.Windows.Forms.Timer(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.clockArea.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -56,10 +56,10 @@
             this.clockArea.Location = new System.Drawing.Point(0, 0);
             this.clockArea.Name = "clockArea";
             this.clockArea.RowCount = 3;
-            this.clockArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.71212F));
-            this.clockArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.35736F));
-            this.clockArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.93052F));
-            this.clockArea.Size = new System.Drawing.Size(607, 527);
+            this.clockArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.24267F));
+            this.clockArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.97554F));
+            this.clockArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.78179F));
+            this.clockArea.Size = new System.Drawing.Size(592, 528);
             this.clockArea.TabIndex = 0;
             // 
             // Clock
@@ -70,7 +70,7 @@
             this.Clock.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clock.Location = new System.Drawing.Point(3, 0);
             this.Clock.Name = "Clock";
-            this.Clock.Size = new System.Drawing.Size(601, 235);
+            this.Clock.Size = new System.Drawing.Size(586, 207);
             this.Clock.TabIndex = 0;
             this.Clock.Text = "\"HH:MM:SS\"";
             this.Clock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,12 +84,12 @@
             this.tableLayoutPanel1.Controls.Add(this.Alarm, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.StopWatch_Button, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 238);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 210);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(601, 80);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(586, 88);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // Alarm
@@ -99,7 +99,7 @@
             this.Alarm.Location = new System.Drawing.Point(5, 5);
             this.Alarm.Margin = new System.Windows.Forms.Padding(5);
             this.Alarm.Name = "Alarm";
-            this.Alarm.Size = new System.Drawing.Size(290, 55);
+            this.Alarm.Size = new System.Drawing.Size(283, 78);
             this.Alarm.TabIndex = 0;
             this.Alarm.Text = "Add Alarm";
             this.Alarm.UseVisualStyleBackColor = true;
@@ -109,10 +109,10 @@
             // 
             this.StopWatch_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.StopWatch_Button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StopWatch_Button.Location = new System.Drawing.Point(305, 5);
+            this.StopWatch_Button.Location = new System.Drawing.Point(298, 5);
             this.StopWatch_Button.Margin = new System.Windows.Forms.Padding(5);
             this.StopWatch_Button.Name = "StopWatch_Button";
-            this.StopWatch_Button.Size = new System.Drawing.Size(291, 55);
+            this.StopWatch_Button.Size = new System.Drawing.Size(283, 78);
             this.StopWatch_Button.TabIndex = 1;
             this.StopWatch_Button.Text = "Timer";
             this.StopWatch_Button.UseVisualStyleBackColor = true;
@@ -126,12 +126,12 @@
             this.tableLayoutPanel2.Controls.Add(this.timeLabel, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 324);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 304);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 136F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(601, 200);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(586, 221);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // timeLabel
@@ -140,22 +140,12 @@
             this.timeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(303, 0);
+            this.timeLabel.Location = new System.Drawing.Point(296, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(295, 200);
+            this.timeLabel.Size = new System.Drawing.Size(287, 221);
             this.timeLabel.TabIndex = 0;
             this.timeLabel.Text = "00:00:00";
             this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // timerclock
-            // 
-            this.timerclock.Enabled = true;
-            this.timerclock.Tick += new System.EventHandler(this.timerclock_Tick);
-            // 
-            // timer
-            // 
-            this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // tableLayoutPanel3
             // 
@@ -168,14 +158,24 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.07692F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.92308F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(294, 194);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(287, 215);
             this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // timerclock
+            // 
+            this.timerclock.Enabled = true;
+            this.timerclock.Tick += new System.EventHandler(this.timerclock_Tick);
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 527);
+            this.ClientSize = new System.Drawing.Size(592, 528);
             this.Controls.Add(this.clockArea);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
