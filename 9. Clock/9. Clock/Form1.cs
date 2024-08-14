@@ -14,6 +14,8 @@ namespace _9.Clock
 
     public partial class Form1 : Form
     {
+        AlarmForm AlarmForm;
+        public string listAlarm;
 
         public Form1()
         {
@@ -24,8 +26,6 @@ namespace _9.Clock
 
         int hours, minutes;
         int seconds = 1; // Initialize at one for the timer_tick
-
-
 
 
         private void timerclock_Tick(object sender, EventArgs e)
@@ -41,7 +41,13 @@ namespace _9.Clock
             //
         {           
             using (var alarmForm = new AlarmForm())
-            alarmForm.ShowDialog(); 
+            alarmForm.ShowDialog();
+            listAlarms.Items.Add(hours);
+        }
+
+        private void ActivatesAlarm()
+        {
+            
         }
 
 
@@ -99,6 +105,9 @@ namespace _9.Clock
         {
             return $"{hours:D2}:{minutes:D2}:{seconds:D2}"; // D2 put the number in a "00" Format
         }
+
+
+
     }
     
 }
