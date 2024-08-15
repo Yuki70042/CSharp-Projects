@@ -43,12 +43,11 @@ namespace _7.Tic_Tac_Toe
             };
         }
 
-
         // ------------ Events Part and main game
 
         // Main event
         private void button_Click(object sender, EventArgs e)
-            // click event, change the text (font webding) to display a cross
+            // click event, change the text (font webding) to display a circle
         {
             Button clickedButton = sender as Button;
 
@@ -68,11 +67,6 @@ namespace _7.Tic_Tac_Toe
                         // If AI mode is active and the game isn't over                        
                         AITurnMinimax(); // AI takes its turn                       
                     }
-
-                    else
-                    {
-                        MessageBox.Show("Win");
-                    }
                 }
 
                 else // If the case already has a symbol inside
@@ -86,30 +80,29 @@ namespace _7.Tic_Tac_Toe
         private void ChangeMode_Click(object sender, EventArgs e)
             // Change in the two player mode if currently in IA mode and reverse
         {
-            
+            symbol = "n"; // reset the symbole ("O" for the first player)
+            InformationsText.Text = "Player1 turn";
+            winner = false;
+            ActivateBoardButtons();
+
             if (ChangeMode.Text == "Play with Player 2")
             {
                 ChangeMode.Text = "Play with AI";               
                 AIMode = false;
                 ClearBoard();
-                currentPlayer = "Player1";
-                symbol = "n";
+                currentPlayer = "Player1";              
                 MessageBox.Show("You are now in 2 Player mod");
-
             }
+
             else
             {
                 ChangeMode.Text = "Play with Player 2";
                 currentPlayer = "Player1";
-                symbol = "n";
                 ClearBoard();
                 AIMode = true;
                 MessageBox.Show("You are playing now against the AI. \nYou start with \"O\"");
             }
 
-            InformationsText.Text = "Player1 turn";
-            winner = false;
-            ActivateBoardButtons();
         }
 
         private void RestartButton_Click(object sender, EventArgs e)
@@ -222,6 +215,7 @@ namespace _7.Tic_Tac_Toe
                 {
                     buttons[bestMove].Text = symbol;
                     CheckForWinner();
+                    AnnounceWinner();
                     SwitchPlayer(); // Move to the next player
                 }
             }
@@ -267,7 +261,7 @@ namespace _7.Tic_Tac_Toe
                 int best = int.MaxValue;
 
                 // Iterate through all possible moves
-                for (int i = 0; i < buttons.Length; i++)
+                for (int i = 0; i < buttons.Length -1; i++)
                 {
                     if (string.IsNullOrEmpty(buttons[i].Text))
                     {
@@ -276,7 +270,7 @@ namespace _7.Tic_Tac_Toe
                         buttons[i].Text = string.Empty;
                     }
                 }
-                return best;
+                return best; // Return the best (Min) move find
             }
         }
 
@@ -307,17 +301,15 @@ namespace _7.Tic_Tac_Toe
 
                 if (CheckLine(buttons[index1], buttons[index2], buttons[index3]))
                 {
+                    winner = true;
+
                     if (buttons[index1].Text == "r") // Example for "X"
-                    {
-                        DisableBoardButtons();
-                        winner = true;
+                    {                     
                         return 10; // Value for "X" win
                     }
 
                     else if (buttons[index1].Text == "n") // Example for "O"
                     {
-                        DisableBoardButtons();
-                        winner = true;
                         return -10; // Value for "O" win
                     }
                     
@@ -326,8 +318,7 @@ namespace _7.Tic_Tac_Toe
             if (BoardIsFull())
             {
                 DisableBoardButtons();
-                // MessageBox.Show("It's a Draw !");
-                winner = true;
+                itsADraw = true;
                 return 0;
             }
 
@@ -351,11 +342,11 @@ namespace _7.Tic_Tac_Toe
             }
         }
 
-
         private bool CheckLine(Button a, Button b, Button c)
         {
             return a.Text == b.Text && b.Text == c.Text && !string.IsNullOrEmpty(a.Text);
         }
+
 
         // -------- Board Status
         private bool BoardIsFull()
@@ -383,21 +374,21 @@ namespace _7.Tic_Tac_Toe
                 }
             }
         }
-        // ------ 
-
+        // -----------             ----------
 
         private void AnnounceWinner()
         {
-
             if (winner)
             {
                 string winnerSymbol = symbol == "n" ? "O" : "X";
-                MessageBox.Show($"Player with {winnerSymbol} wins!", "Game Over");
+                DisableBoardButtons();
+                MessageBox.Show($"Player with {winnerSymbol} wins!", "Game Over");                
             }
 
             else if (BoardIsFull())
             {
-                MessageBox.Show("It's a draw!", "Game Over");
+                DisableBoardButtons();
+                MessageBox.Show("It's a draw!", "Game Over");                
             }
         }
     }
