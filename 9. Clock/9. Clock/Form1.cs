@@ -11,15 +11,16 @@ using System.Windows.Forms;
 
 namespace _9.Clock
 {
-
+    
     public partial class Form1 : Form
     {
+        
         AlarmForm AlarmForm;
-        public string listAlarm;
 
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         // --  Initialize variables
@@ -35,21 +36,19 @@ namespace _9.Clock
         }
 
 
-
         // ----------- Alarm part
         private void Alarm_Click(object sender, EventArgs e)
-            //
-        {           
-            using (var alarmForm = new AlarmForm())
-            alarmForm.ShowDialog();
-            listAlarms.Items.Add(hours);
-        }
-
-        private void ActivatesAlarm()
+            // Open the second form 
         {
-            
+            AlarmForm alarmForm = new AlarmForm(this);
+            alarmForm.ShowDialog();
         }
 
+        public void AddAlarmToList(DateTime alarmTime)
+            // This methode add the new alarm in the list in the correct format
+        {
+            listAlarms.Items.Add(alarmTime.ToString("HH:mm:ss"));
+        }
 
 
         // ------------- StopWatch event
@@ -98,6 +97,8 @@ namespace _9.Clock
                 hours = minutes = seconds = 0;
                 timeLabel.Text = GetFormattedTime();
             }
+
+            
         }
 
         string GetFormattedTime()

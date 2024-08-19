@@ -13,26 +13,25 @@ namespace _9.Clock
 {
     public partial class AlarmForm : Form
     {
-        public DateTime alarm;
-        public string test;
-        Form1 Form1;
+        private Form1 mainForm;
+        
 
-        public AlarmForm()
+        public AlarmForm(Form1 form1)
+            // Create the link between the main form : Form1 and the AlarmForm
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
+            mainForm = form1;
         }
 
         public void createAlarm_Click(object sender, EventArgs e)
         {
-            alarm = TimePicker1.Value;
-            label1.Text = alarm.ToString();
-            Close();
+            DateTime selectTime = TimePicker1.Value;
+            mainForm.AddAlarmToList(selectTime);
         }
 
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
