@@ -10,8 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _9.Clock
-{
-    
+{ 
     public partial class Form1 : Form
     {
         
@@ -20,7 +19,6 @@ namespace _9.Clock
         public Form1()
         {
             InitializeComponent();
-            
         }
 
         // --  Initialize variables
@@ -33,6 +31,7 @@ namespace _9.Clock
             // Displays current time
         {
             Clock.Text = DateTime.Now.ToString("HH:mm:ss");
+
         }
 
 
@@ -40,15 +39,18 @@ namespace _9.Clock
         private void Alarm_Click(object sender, EventArgs e)
             // Open the second form 
         {
-            AlarmForm alarmForm = new AlarmForm(this);
-            alarmForm.ShowDialog();
+            AlarmForm alarmForm = new AlarmForm(this); 
+            alarmForm.ShowDialog(); // Open the AlarmForm
+            StartAlarm();
         }
 
         public void AddAlarmToList(DateTime alarmTime)
-            // This methode add the new alarm in the list in the correct format
+            // This method add the new alarm in the list in the correct format
+            // This method is public to be use in the second form (AlarmForm)
         {
             listAlarms.Items.Add(alarmTime.ToString("HH:mm:ss"));
         }
+
 
 
         // ------------- StopWatch event
@@ -107,7 +109,17 @@ namespace _9.Clock
             return $"{hours:D2}:{minutes:D2}:{seconds:D2}"; // D2 put the number in a "00" Format
         }
 
+        private void StartAlarm()
+        {
 
+            for (int i = 0; i < listAlarms.Items.Length() ; i++)
+            {
+                if (listAlarms.Items[i].ToString.Contains(DateTime.Now.ToString("HH:mm:ss")))
+                {
+                    MessageBox.Show("DING DING DING");
+                }
+            }         
+        }
 
     }
     
