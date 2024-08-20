@@ -21,7 +21,7 @@ namespace _9.Clock
         int seconds = 1; // Initialize at one for the timer_tick
 
         int tickCount = 0; // Add a tick counter to use only one timer
-        int intervalCount = 800; // 800 ticks = 8 * timerclock_Tick
+        int intervalCount = 900; // 800 ticks = 8 * timerclock_Tick
 
         private SoundPlayer alarmSound; // Initialize a sound object "alarmSound"
         AlarmForm AlarmForm;
@@ -29,6 +29,9 @@ namespace _9.Clock
         public Form1()
         {
             InitializeComponent();
+            ContextMenuStrip = MenuListView;
+
+
             string soundFilePathAlarm = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "alarmSound.wav");
             alarmSound = new SoundPlayer(soundFilePathAlarm);
         }
@@ -121,14 +124,23 @@ namespace _9.Clock
             return $"{hours:D2}:{minutes:D2}:{seconds:D2}"; // D2 put the number in a "00" Format
         }
 
-        private void MenuListBox_Opening(object sender, CancelEventArgs e)
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (listAlarms.SelectedItems.Count > 0)
+                // If Select an Item with right Click
+            {
+                listAlarms.Items.Remove(listAlarms.SelectedItems[0]);
+                // Delete the select Item
+            }
+            else
+            {
+                MessageBox.Show("No items to delete");               
+            }
         }
+
 
         private void StartAlarm()
         {
-
             for (int i = 0; i < listAlarms.Items.Count ; i++)
             {
                 // Convertir l'élément en chaîne
@@ -138,11 +150,11 @@ namespace _9.Clock
                 if (alarmTime.Contains(DateTime.Now.ToString("HH:mm:ss")))
                 {
                     alarmSound.Play();
-                    MessageBox.Show("DING");                   
+                    MessageBox.Show("DING");
+                    listAlarms.Items.Remove(listAlarms.Items[i]);
                 }
             }         
         }
-
     }
     
 }

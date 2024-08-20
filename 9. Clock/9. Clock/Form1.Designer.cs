@@ -40,12 +40,12 @@
             this.listAlarms = new System.Windows.Forms.ListView();
             this.timerclock = new System.Windows.Forms.Timer(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.MenuListBox = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MenuListView = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clockArea.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.MenuListBox.SuspendLayout();
+            this.MenuListView.SuspendLayout();
             this.SuspendLayout();
             // 
             // clockArea
@@ -159,6 +159,7 @@
             this.listAlarms.Size = new System.Drawing.Size(276, 203);
             this.listAlarms.TabIndex = 1;
             this.listAlarms.UseCompatibleStateImageBehavior = false;
+            this.listAlarms.View = System.Windows.Forms.View.List;
             // 
             // timerclock
             // 
@@ -170,18 +171,19 @@
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // MenuListBox
+            // MenuListView
             // 
-            this.MenuListBox.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuListView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteToolStripMenuItem});
-            this.MenuListBox.Name = "MenuListBox";
-            this.MenuListBox.Size = new System.Drawing.Size(108, 26);
+            this.MenuListView.Name = "MenuListBox";
+            this.MenuListView.Size = new System.Drawing.Size(108, 26);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -197,7 +199,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.MenuListBox.ResumeLayout(false);
+            this.MenuListView.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -213,7 +215,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.ContextMenuStrip MenuListBox;
+        private System.Windows.Forms.ContextMenuStrip MenuListView;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ListView listAlarms;
     }
