@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -14,23 +15,24 @@ namespace _9.Clock
 { 
     public partial class Form1 : Form
     {
-        
-        AlarmForm AlarmForm;
-
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
         // --  Initialize variables
 
         int hours, minutes;
         int seconds = 1; // Initialize at one for the timer_tick
 
         int tickCount = 0; // Add a tick counter to use only one timer
-        int intervalCount = 500; // 500 ticks = 5 * timerclock_Tick
+        int intervalCount = 800; // 800 ticks = 8 * timerclock_Tick
 
-        SoundPlayer alarmSound; // Initialize a sound object "alarmSound"
+        private SoundPlayer alarmSound; // Initialize a sound object "alarmSound"
+        AlarmForm AlarmForm;
+
+        public Form1()
+        {
+            InitializeComponent();
+            string soundFilePathAlarm = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "alarmSound.wav");
+            alarmSound = new SoundPlayer(soundFilePathAlarm);
+        }
+
 
 
         private void timerclock_Tick(object sender, EventArgs e)
@@ -135,7 +137,8 @@ namespace _9.Clock
                 // Vérifier si l'élément contient exactement l'heure actuelle au format HH:mm:ss
                 if (alarmTime.Contains(DateTime.Now.ToString("HH:mm:ss")))
                 {
-                    MessageBox.Show("DING");
+                    alarmSound.Play();
+                    MessageBox.Show("DING");                   
                 }
             }         
         }

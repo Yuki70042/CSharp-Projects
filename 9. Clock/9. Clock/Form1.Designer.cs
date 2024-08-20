@@ -159,7 +159,6 @@
             this.listAlarms.Size = new System.Drawing.Size(276, 203);
             this.listAlarms.TabIndex = 1;
             this.listAlarms.UseCompatibleStateImageBehavior = false;
-            this.listAlarms.ContextMenuStripChanged += new System.EventHandler(this.MenuListBox);
             // 
             // timerclock
             // 
