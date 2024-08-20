@@ -37,11 +37,11 @@
             this.StopWatch_Button = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.timeLabel = new System.Windows.Forms.Label();
+            this.listAlarms = new System.Windows.Forms.ListView();
             this.timerclock = new System.Windows.Forms.Timer(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.MenuListBox = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listAlarms = new System.Windows.Forms.ListView();
             this.clockArea.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -150,6 +150,17 @@
             this.timeLabel.Text = "00:00:00";
             this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // listAlarms
+            // 
+            this.listAlarms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listAlarms.HideSelection = false;
+            this.listAlarms.Location = new System.Drawing.Point(3, 3);
+            this.listAlarms.Name = "listAlarms";
+            this.listAlarms.Size = new System.Drawing.Size(276, 203);
+            this.listAlarms.TabIndex = 1;
+            this.listAlarms.UseCompatibleStateImageBehavior = false;
+            this.listAlarms.ContextMenuStripChanged += new System.EventHandler(this.MenuListBox);
+            // 
             // timerclock
             // 
             this.timerclock.Enabled = true;
@@ -172,16 +183,6 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // listAlarms
-            // 
-            this.listAlarms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listAlarms.HideSelection = false;
-            this.listAlarms.Location = new System.Drawing.Point(3, 3);
-            this.listAlarms.Name = "listAlarms";
-            this.listAlarms.Size = new System.Drawing.Size(276, 203);
-            this.listAlarms.TabIndex = 1;
-            this.listAlarms.UseCompatibleStateImageBehavior = false;
             // 
             // Form1
             // 

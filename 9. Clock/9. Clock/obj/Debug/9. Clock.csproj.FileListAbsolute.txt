@@ -9,3 +9,14 @@ C:\Projet\GitHub\CSharp-Projects\9. Clock\9. Clock\obj\Debug\9. Clock.csproj.Cor
 C:\Projet\GitHub\CSharp-Projects\9. Clock\9. Clock\obj\Debug\_9.Clock.exe
 C:\Projet\GitHub\CSharp-Projects\9. Clock\9. Clock\obj\Debug\_9.Clock.pdb
 C:\Projet\GitHub\CSharp-Projects\9. Clock\9. Clock\obj\Debug\_9.Clock.AlarmForm.resources
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\obj\Debug\9. Clock.csproj.AssemblyReference.cache
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\obj\Debug\_9.Clock.AlarmForm.resources
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\obj\Debug\_9.Clock.Form1.resources
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\obj\Debug\_9.Clock.Properties.Resources.resources
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\obj\Debug\9. Clock.csproj.GenerateResource.cache
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\obj\Debug\9. Clock.csproj.CoreCompileInputs.cache
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\obj\Debug\_9.Clock.exe
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\obj\Debug\_9.Clock.pdb
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\bin\Debug\_9.Clock.exe.config
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\bin\Debug\_9.Clock.exe
+D:\Projet\C#\CSharp-Projects\9. Clock\9. Clock\bin\Debug\_9.Clock.pdb

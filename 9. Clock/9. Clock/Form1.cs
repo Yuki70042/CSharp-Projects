@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -26,12 +27,23 @@ namespace _9.Clock
         int hours, minutes;
         int seconds = 1; // Initialize at one for the timer_tick
 
+        int tickCount = 0; // Add a tick counter to use only one timer
+        int intervalCount = 500; // 500 ticks = 5 * timerclock_Tick
+
+        SoundPlayer alarmSound; // Initialize a sound object "alarmSound"
+
 
         private void timerclock_Tick(object sender, EventArgs e)
             // Displays current time
         {
             Clock.Text = DateTime.Now.ToString("HH:mm:ss");
+            tickCount += 100; 
 
+            if (tickCount >= intervalCount)
+            {
+                tickCount = 0; // reset the ticker Count
+                StartAlarm();  // Check if an alarm is programmed
+            }
         }
 
 
@@ -40,8 +52,7 @@ namespace _9.Clock
             // Open the second form 
         {
             AlarmForm alarmForm = new AlarmForm(this); 
-            alarmForm.ShowDialog(); // Open the AlarmForm
-            StartAlarm();
+            alarmForm.ShowDialog(); // Open the AlarmForm            
         }
 
         public void AddAlarmToList(DateTime alarmTime)
@@ -57,6 +68,8 @@ namespace _9.Clock
         private void timer_Tick(object sender, EventArgs e)
             // Every Second, display the new value in the timer and add 1 second
         {
+            
+
             timeLabel.Text = GetFormattedTime();
             seconds++;
 
@@ -71,13 +84,12 @@ namespace _9.Clock
             {
                 minutes = 0;
                 hours++;
-            }
+            }            
         }
 
 
         private void StopWatch_Button_Click(object sender, EventArgs e)
         {
-
             if (StopWatch_Button.Text == "Timer")
                 // Start the timer and change the button Text
             {
@@ -98,9 +110,7 @@ namespace _9.Clock
                 StopWatch_Button.Text = "Timer";             
                 hours = minutes = seconds = 0;
                 timeLabel.Text = GetFormattedTime();
-            }
-
-            
+            }         
         }
 
         string GetFormattedTime()
@@ -109,14 +119,23 @@ namespace _9.Clock
             return $"{hours:D2}:{minutes:D2}:{seconds:D2}"; // D2 put the number in a "00" Format
         }
 
+        private void MenuListBox_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
         private void StartAlarm()
         {
 
-            for (int i = 0; i < listAlarms.Items.Length() ; i++)
+            for (int i = 0; i < listAlarms.Items.Count ; i++)
             {
-                if (listAlarms.Items[i].ToString.Contains(DateTime.Now.ToString("HH:mm:ss")))
+                // Convertir l'élément en chaîne
+                string alarmTime = listAlarms.Items[i].ToString();
+
+                // Vérifier si l'élément contient exactement l'heure actuelle au format HH:mm:ss
+                if (alarmTime.Contains(DateTime.Now.ToString("HH:mm:ss")))
                 {
-                    MessageBox.Show("DING DING DING");
+                    MessageBox.Show("DING");
                 }
             }         
         }
