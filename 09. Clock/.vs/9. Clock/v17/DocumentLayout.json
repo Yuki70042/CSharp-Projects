@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\",
+  "WorkspaceRootPath": "D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|d:\\projet\\c#\\csharp-projects\\9. clock\\9. clock\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|d:\\projet\\c#\\csharp-projects\\09. clock\\9. clock\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|solutionrelative:9. clock\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. clock\\alarmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\9. clock\\alarmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|solutionrelative:9. clock\\alarmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\9. clock\\alarmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|solutionrelative:9. clock\\alarmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. clock\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\9. clock\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|solutionrelative:9. clock\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. clock\\alarmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4FC1DA4-1FFF-4CA4-81A5-33C824477BFF}|9. Clock\\9. Clock.csproj|solutionrelative:9. clock\\alarmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,13 +30,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AlarmForm.cs",
-              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. Clock\\AlarmForm.cs",
+              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\9. Clock\\AlarmForm.cs",
               "RelativeDocumentMoniker": "9. Clock\\AlarmForm.cs",
-              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. Clock\\AlarmForm.cs",
+              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\9. Clock\\AlarmForm.cs",
               "RelativeToolTip": "9. Clock\\AlarmForm.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-20T17:36:11.433Z",
               "IsPinned": true,
@@ -46,11 +46,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. Clock\\Form1.cs",
+              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\9. Clock\\Form1.cs",
               "RelativeDocumentMoniker": "9. Clock\\Form1.cs",
-              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. Clock\\Form1.cs",
+              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\9. Clock\\Form1.cs",
               "RelativeToolTip": "9. Clock\\Form1.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAuwCMAAAA9AAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAowEEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-20T17:36:03.868Z",
               "IsPinned": true,
@@ -58,11 +58,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AlarmForm.cs [Design]",
-              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. Clock\\AlarmForm.cs",
+              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\9. Clock\\AlarmForm.cs",
               "RelativeDocumentMoniker": "9. Clock\\AlarmForm.cs",
-              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. Clock\\AlarmForm.cs [Design]",
+              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\9. Clock\\AlarmForm.cs [Design]",
               "RelativeToolTip": "9. Clock\\AlarmForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-20T17:35:59.123Z",
@@ -70,15 +70,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. Clock\\Form1.cs",
+              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\09. Clock\\9. Clock\\Form1.cs",
               "RelativeDocumentMoniker": "9. Clock\\Form1.cs",
               "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\9. Clock\\9. Clock\\Form1.cs [Design]",
-              "RelativeToolTip": "9. Clock\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\9. Clock\\9. Clock\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T18:23:28.161Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-20T18:23:28.161Z"
             }
           ]
         }

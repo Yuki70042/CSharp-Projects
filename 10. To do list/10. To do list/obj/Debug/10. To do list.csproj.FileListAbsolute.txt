@@ -1,0 +1,11 @@
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\bin\Debug\_10.To_do_list.exe.config
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\bin\Debug\_10.To_do_list.exe
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\bin\Debug\_10.To_do_list.pdb
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\obj\Debug\10. To do list.csproj.AssemblyReference.cache
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\obj\Debug\_10.To_do_list.Properties.Resources.resources
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\obj\Debug\10. To do list.csproj.GenerateResource.cache
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\obj\Debug\10. To do list.csproj.CoreCompileInputs.cache
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\obj\Debug\_10.To_do_list.exe
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\obj\Debug\_10.To_do_list.pdb
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\obj\Debug\_10.To_do_list.Menu.resources
+D:\Projet\C#\CSharp-Projects\10. To do list\10. To do list\obj\Debug\_10.To_do_list.AddTasks.resources

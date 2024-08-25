@@ -68,7 +68,6 @@ namespace _9.Clock
         }
 
 
-
         // ------------- StopWatch event
         private void timer_Tick(object sender, EventArgs e)
             // Every Second, display the new value in the timer and add 1 second
@@ -91,7 +90,6 @@ namespace _9.Clock
                 hours++;
             }            
         }
-
 
         private void StopWatch_Button_Click(object sender, EventArgs e)
         {
