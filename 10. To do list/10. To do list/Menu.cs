@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace _10.To_do_list
 {
@@ -22,6 +24,19 @@ namespace _10.To_do_list
             InitializeComponent();
             LoadTasks();
             this.FormClosing += new FormClosingEventHandler(Menu_FormClosing);
+
+
+            // Activer l'événement ItemDrag
+            listTask.ItemDrag += listTask_ItemDrag;
+
+            // Activer l'événement DragEnter
+            listTask.DragEnter += listTask_DragEnter;
+
+            // Activer l'événement DragDrop
+            listTask.DragDrop += listTask_DragDrop;
+
+            // Configurer le contrôle pour autoriser le drop
+            listTask.AllowDrop = true;
         }
 
 
@@ -62,6 +77,7 @@ namespace _10.To_do_list
         }
 
         private void LoadTasks()
+            // Start the programm and load the different tasks
         {
             if (System.IO.File.Exists("tasks.txt"))
             {
@@ -83,6 +99,7 @@ namespace _10.To_do_list
 
          
         private void SaveTasks()
+            // Save the current taks in a text file
         {
             List<string> tasksToSave = new List<string>();
 
@@ -98,8 +115,85 @@ namespace _10.To_do_list
         }
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+            // When the programm ends, save the taks
         {
             SaveTasks();
+        }
+
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+            // Remove the task select with right click
+        {
+            foreach (ListViewItem selectedItem in listTask.SelectedItems)
+            {
+                listTask.Items.Remove(selectedItem);
+                SaveTasks(); // Save the current List with modifications
+            }
+        }
+
+        private void listTask_MouseDown(object sender, MouseEventArgs e)
+            // Allows you to display the delete option only on tasks already created
+        {
+            //  Check if the right mouse button was clicked
+            if (e.Button == MouseButtons.Right)
+            {
+                // Obtenir l'élément sous le curseur
+                ListViewItem item = listTask.GetItemAt(e.X, e.Y);
+
+                if (item != null)
+                {
+                    // Select the item you right-clicked on
+                    item.Selected = true;
+                    // Afficher le menu contextuel sur l'élément
+                    listTask.ContextMenuStrip = contextMenuStrip1;
+                }
+                else
+                {
+                    // Prevent context menu from showing if no item is selected
+                    listTask.ContextMenuStrip = null;
+                }
+            }
+        }
+
+        private void listTask_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            // Start drag and drop operation
+            DoDragDrop(e.Item, DragDropEffects.Move);
+
+        }
+
+        private void listTask_DragEnter(object sender, DragEventArgs e)
+        {
+            // Check if it is the good format and if the movement possible
+            if (e.Data.GetDataPresent(typeof(ListViewItem)))
+            {
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void listTask_DragDrop(object sender, DragEventArgs e)
+            // Drag and Drop function
+        {
+            // recover the item that is moved
+            if (e.Data.GetDataPresent(typeof(ListViewItem)))
+            {
+                ListViewItem draggedItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
+
+                // Calculate the new position in the listView
+                Point pt = listTask.PointToClient(new Point(e.X, e.Y));
+                ListViewItem targetItem = listTask.GetItemAt(pt.X, pt.Y);
+
+                if (targetItem != null)
+                {
+                    int targetIndex = targetItem.Index;
+                    listTask.Items.Remove(draggedItem);
+                    listTask.Items.Insert(targetIndex, draggedItem);
+                }
+            }
         }
     }
 }
