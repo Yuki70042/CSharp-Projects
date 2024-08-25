@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _10.To_do_list
 {
@@ -14,10 +16,14 @@ namespace _10.To_do_list
     {
         AddTasks AddTasks;
 
+
         public Menu()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            LoadTasks();
+            this.FormClosing += new FormClosingEventHandler(Menu_FormClosing);
         }
+
 
         private void BtnAddTask_Click(object sender, EventArgs e)
         {
@@ -53,6 +59,47 @@ namespace _10.To_do_list
         public void AddTaskToList(string newTask)
         {
             listTask.Items.Add(newTask);
+        }
+
+        private void LoadTasks()
+        {
+            if (System.IO.File.Exists("tasks.txt"))
+            {
+                string[] tasksFromFile = System.IO.File.ReadAllLines("tasks.txt");
+
+                foreach (string taskLine in tasksFromFile)
+                {
+                    //Retrieve the status of the task(checked or not) and the text
+                    bool isChecked = taskLine.StartsWith("1");
+                    string taskText = taskLine.Substring(1);
+
+                    ListViewItem item = new ListViewItem(taskText);
+                    item.Checked = isChecked;
+
+                    listTask.Items.Add(item);
+                }
+            }
+        }
+
+         
+        private void SaveTasks()
+        {
+            List<string> tasksToSave = new List<string>();
+
+            foreach (ListViewItem task in listTask.Items)
+            {
+                // Format : [0|1]TaskDescription
+                // 0 for not finished, 1 for finished
+                string taskLine = (task.Checked ? "1" : "0") + task.Text;
+                tasksToSave.Add(taskLine);
+            }
+
+            System.IO.File.WriteAllLines("tasks.txt", tasksToSave);
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveTasks();
         }
     }
 }

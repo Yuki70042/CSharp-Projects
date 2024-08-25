@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "D:\\Projet\\C#\\CSharp-Projects\\10. To do list\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|D:\\Projet\\C#\\CSharp-Projects\\10. To do list\\10. to do list\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|solutionrelative:10. to do list\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|D:\\Projet\\C#\\CSharp-Projects\\10. To do list\\10. to do list\\addtasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|solutionrelative:10. to do list\\addtasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|d:\\projet\\c#\\csharp-projects\\10. to do list\\10. to do list\\addtasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|solutionrelative:10. to do list\\addtasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|d:\\projet\\c#\\csharp-projects\\10. to do list\\10. to do list\\addtasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|solutionrelative:10. to do list\\addtasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|d:\\projet\\c#\\csharp-projects\\10. to do list\\10. to do list\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|solutionrelative:10. to do list\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|d:\\projet\\c#\\csharp-projects\\10. to do list\\10. to do list\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|D:\\Projet\\C#\\CSharp-Projects\\10. To do list\\10. to do list\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6354B7BB-E617-48CE-AB50-4BFCAEE064FF}|10. To do list\\10. To do list.csproj|solutionrelative:10. to do list\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -26,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Menu.cs",
               "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\10. To do list\\10. To do list\\Menu.cs",
               "RelativeDocumentMoniker": "10. To do list\\Menu.cs",
               "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\10. To do list\\10. To do list\\Menu.cs",
               "RelativeToolTip": "10. To do list\\Menu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAANAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAABsAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T18:58:29.082Z",
               "EditorCaption": ""
@@ -49,14 +49,14 @@
               "RelativeDocumentMoniker": "10. To do list\\AddTasks.cs",
               "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\10. To do list\\10. To do list\\AddTasks.cs",
               "RelativeToolTip": "10. To do list\\AddTasks.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAJAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T19:04:01.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AddTasks.cs [Design]",
               "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\10. To do list\\10. To do list\\AddTasks.cs",
               "RelativeDocumentMoniker": "10. To do list\\AddTasks.cs",
