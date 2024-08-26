@@ -13,7 +13,7 @@ namespace _10.To_do_list
     public partial class AddTasks : Form
     {
         private Menu mainForm; 
-        string newTask;
+        string taskName;
 
         public AddTasks(Menu Menu)
         {
@@ -23,9 +23,14 @@ namespace _10.To_do_list
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-           newTask = nameNewTask.Text;
-           mainForm.AddTaskToList(newTask);
-           this.Close();
+            string taskName = nameNewTask.Text;
+            string importance = comboBoxImportance.SelectedItem.ToString();
+            DateTime dueDate = dateTimePickerDueDate.Value;
+
+            // AA the task to the main form
+            mainForm.AddTaskToList(taskName, importance, dueDate);
+
+            this.Close();
         }
     }
 }

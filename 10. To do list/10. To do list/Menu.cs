@@ -43,8 +43,7 @@ namespace _10.To_do_list
         private void BtnAddTask_Click(object sender, EventArgs e)
         {
             AddTasks addTasks = new AddTasks(this);
-            addTasks.ShowDialog();
-            
+            addTasks.ShowDialog();           
         }
 
         private void BtnRemoveTask_Click(object sender, EventArgs e)
@@ -71,10 +70,18 @@ namespace _10.To_do_list
 
         }
 
-        public void AddTaskToList(string newTask)
+        public void AddTaskToList(string taskName,string importance, DateTime dueDate)
         {
-            listTask.Items.Add(newTask);
+            ListViewItem item = new ListViewItem(taskName);
+
+            item.SubItems.Add(importance);
+            item.SubItems.Add(dueDate.ToShortDateString());
+
+            // Add the complet item to the list
+            listTask.Items.Add(item);
         }
+
+
 
         private void LoadTasks()
             // Start the programm and load the different tasks
@@ -85,14 +92,24 @@ namespace _10.To_do_list
 
                 foreach (string taskLine in tasksFromFile)
                 {
-                    //Retrieve the status of the task(checked or not) and the text
-                    bool isChecked = taskLine.StartsWith("1");
-                    string taskText = taskLine.Substring(1);
+                    // Separate the different parts of the line
+                    string[] parts = taskLine.Split('|');
+                    if (parts.Length == 4)
+                    {
+                        // recover the elements
+                        bool isChecked = parts[0] == "1";
+                        string taskText = parts[1];
+                        string importance = parts[2];
+                        string dueDate = parts[3];
 
-                    ListViewItem item = new ListViewItem(taskText);
-                    item.Checked = isChecked;
+                        // Create ListViewItem with sub-items
+                        ListViewItem item = new ListViewItem(taskText);
+                        item.SubItems.Add(importance);
+                        item.SubItems.Add(dueDate);
+                        item.Checked = isChecked;
 
-                    listTask.Items.Add(item);
+                        listTask.Items.Add(item);
+                    }
                 }
             }
         }
@@ -104,15 +121,20 @@ namespace _10.To_do_list
             List<string> tasksToSave = new List<string>();
 
             foreach (ListViewItem task in listTask.Items)
-            {
-                // Format : [0|1]TaskDescription
-                // 0 for not finished, 1 for finished
-                string taskLine = (task.Checked ? "1" : "0") + task.Text;
+            { 
+                // Récupérer les sous-éléments Importance et Date Limite
+                string taskText = task.Text;
+                string importance = task.SubItems[1].Text; // Importance est dans la deuxième colonne
+                string dueDate = task.SubItems[2].Text; // Date Limite est dans la troisième colonne
+
+                // Format : [0|1]|TaskDescription|Importance|DueDate
+                string taskLine = (task.Checked ? "1" : "0") + "|" + taskText + "|" + importance + "|" + dueDate;
                 tasksToSave.Add(taskLine);
             }
 
             System.IO.File.WriteAllLines("tasks.txt", tasksToSave);
         }
+
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
             // When the programm ends, save the taks
@@ -120,16 +142,6 @@ namespace _10.To_do_list
             SaveTasks();
         }
 
-
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-            // Remove the task select with right click
-        {
-            foreach (ListViewItem selectedItem in listTask.SelectedItems)
-            {
-                listTask.Items.Remove(selectedItem);
-                SaveTasks(); // Save the current List with modifications
-            }
-        }
 
         private void listTask_MouseDown(object sender, MouseEventArgs e)
             // Allows you to display the delete option only on tasks already created
@@ -194,6 +206,23 @@ namespace _10.To_do_list
                     listTask.Items.Insert(targetIndex, draggedItem);
                 }
             }
+        }
+
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        // Remove the task select with right click
+        {
+            foreach (ListViewItem selectedItem in listTask.SelectedItems)
+            {
+                listTask.Items.Remove(selectedItem);
+                SaveTasks(); // Save the current List with modifications
+            }
+        }
+
+        private void renameTaskToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            AddTasks addTasks = new AddTasks(this);
+            addTasks.ShowDialog();
         }
     }
 }
