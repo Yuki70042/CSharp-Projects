@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.Title = new System.Windows.Forms.Label();
             this.listTask = new System.Windows.Forms.ListView();
             this.colTask = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -98,20 +99,20 @@
             this.deleteToolStripMenuItem,
             this.renameTaskToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(161, 48);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.deleteToolStripMenuItem.Text = "Remove Task";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // renameTaskToolStripMenuItem
             // 
             this.renameTaskToolStripMenuItem.Name = "renameTaskToolStripMenuItem";
-            this.renameTaskToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.renameTaskToolStripMenuItem.Text = "Change Task";
+            this.renameTaskToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.renameTaskToolStripMenuItem.Text = "Replace the Task";
             this.renameTaskToolStripMenuItem.Click += new System.EventHandler(this.renameTaskToolStripMenuItem_Click_1);
             // 
             // BtnAddTask
@@ -145,8 +146,9 @@
             this.Controls.Add(this.listTask);
             this.Controls.Add(this.Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.Text = "My To Do List";
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

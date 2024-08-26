@@ -65,6 +65,7 @@
             // 
             // comboBoxImportance
             // 
+            this.comboBoxImportance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxImportance.FormattingEnabled = true;
             this.comboBoxImportance.Items.AddRange(new object[] {
             "★",

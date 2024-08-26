@@ -19,6 +19,7 @@ namespace _10.To_do_list
         {
             InitializeComponent();
             mainForm = Menu;
+            comboBoxImportance.SelectedIndex = 0; // Valeur par défaut
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -27,7 +28,7 @@ namespace _10.To_do_list
             string importance = comboBoxImportance.SelectedItem.ToString();
             DateTime dueDate = dateTimePickerDueDate.Value;
 
-            // AA the task to the main form
+            // Add the task to the main form
             mainForm.AddTaskToList(taskName, importance, dueDate);
 
             this.Close();

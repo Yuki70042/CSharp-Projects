@@ -223,6 +223,13 @@ namespace _10.To_do_list
         {
             AddTasks addTasks = new AddTasks(this);
             addTasks.ShowDialog();
+
+            foreach (ListViewItem selectedItem in listTask.SelectedItems)
+            {
+                listTask.Items.Remove(selectedItem);
+                SaveTasks(); // Save the current List with modifications
+            }
+
         }
     }
 }
