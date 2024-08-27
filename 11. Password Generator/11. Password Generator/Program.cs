@@ -3,29 +3,32 @@
 namespace Program
 {
 
-    class Calculator
+    class Password
     {
-        
-        public static void Main(string[] args)
-        {
-            List<string> password = new List<string>();
+        // Create an instance of class random
+        private static Random rand = new Random();
 
-            Console.WriteLine($"Your new password is: '{password}'");
-            CreatePassword(password, 5,5,5);    
-            foreach (string character in password)
+        public static void Main(string[] args)
+        {                    
+            List<string> strongpassword = CreatePassword(6, 5, 5); ; // Define the number of characters as a parameter
+
+            Console.WriteLine("Your new password is:");        
+            foreach (string character in strongpassword)
             {
                 Console.Write(character);
             }
         }
 
 
-
-
-        public static void CreatePassword(List<string>password, int letter, int number, int special)
+        public static List<string> CreatePassword( int letter, int number, int special)
+            // Create and strong password with several steps (to easily change settings)
         {
+            List<string> password = new List<string>();
+
             RandomLetter(password,letter);
             RandomNumber(password, number);
             RandomSpecialCharacter(password, number);
+            return MixPassword(password);
         }
 
 
@@ -33,7 +36,6 @@ namespace Program
         public static void RandomLetter(List<string> listCharacters, int nbr)
             // Add random letter to the list (uppercase and lowercase)
         {
-            Random rand = new Random();
             string letterlist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
             for (int i = 0; i < nbr; i++)
@@ -46,8 +48,7 @@ namespace Program
         public static void RandomSpecialCharacter(List<string> listCharacters, int nbr)
             // Add Random Specials characters to the list
         {
-            Random rand = new Random();
-            string speciallist = "&(-_)*/:,.~#'@{}[]";
+            string speciallist = "&(-_)*/:.~#'@{-}[_]";
 
             for (int i = 0; i < nbr; i++)
             {
@@ -60,8 +61,6 @@ namespace Program
         public static void RandomNumber(List<string> listCharacters, int nbr)
             // Add random number to the list
         {
-            Random rand = new Random();
-
             for (int i = 0; i < nbr; i++)
             {
                 int randomnumber = rand.Next(0, 10);
@@ -70,9 +69,9 @@ namespace Program
         }
 
 
-        private static void MixPassword(List<string> password)
+        private static List<string> MixPassword(List<string> password)
         {
-
+            return password.OrderBy(x => rand.Next()).ToList();             
         }
 
 
