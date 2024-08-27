@@ -11,7 +11,7 @@ A set of my programs done in 2024 to learn c#
 08. Pong Game (2024/08/08 - 2024/08/09)
 09. A clock (2024/08/12 - 2024/08/20)
 10. Simple To do list App (With Save) (2024/08/21 - 2024/08/26)
-11. Password Generator (2024/08/27 - 2024/08/dd)
+11. Password Generator (2024/08/27)
 
   
 ## Project Ideas
