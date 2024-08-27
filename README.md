@@ -7,7 +7,7 @@ A set of my programs done in 2024 to learn c#
 04. Picture Viewer (2024/07/22 - 2024/07/23)
 05. MathQuiz (2024/07/24 - 2024/07/28)
 06. Memory Game (2024/07/29 - 2024/08/01)
-07. Tic Tac Toe Game (with IA + 2 players mode) (2024/07/02 - 2024/08/dd) 
+07. Tic Tac Toe Game (with random + test AI + 2 players mode) (2024/07/02 - 2024/08/17) 
 08. Pong Game (2024/08/08 - 2024/08/09)
 09. A clock (2024/08/12 - 2024/08/20)
 10. Simple To do list App (With Save) (2024/08/21 - 2024/08/26)
