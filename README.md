@@ -11,16 +11,17 @@ A set of my programs done in 2024 to learn c#
 08. Pong Game (2024/08/08 - 2024/08/09)
 09. A clock (2024/08/12 - 2024/08/20)
 10. Simple To do list App (With Save) (2024/08/21 - 2024/08/dd)
+11. Password Generator (2024/08/27 - 2024/08/dd)
   
 ## Project Ideas
 
 - Text Editor
 - Simple Chat App
-- Password manager
 - Keylogger
 - Flappy Bird
 - Snake
+- Password manager + Generator (portfolio)
 - A space shooting game (portfolio)
 - Interactive story-telling (portfolio)
-- Password Generator
 - To do list App more elaborate (portfolio)
+  
