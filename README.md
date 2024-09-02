@@ -20,7 +20,6 @@ A set of my programs done in 2024 to learn c#
 - Simple Chat App
 - Keylogger
 - Flappy Bird
-- Snake
 - Password manager + Generator (portfolio)
 - A space shooting game (portfolio)
 - Interactive story-telling (portfolio)
