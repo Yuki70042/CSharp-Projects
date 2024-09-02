@@ -12,7 +12,7 @@ A set of my programs done in 2024 to learn c#
 09. A clock (2024/08/12 - 2024/08/20)
 10. Simple To do list App (With Save) (2024/08/21 - 2024/08/26)
 11. Password Generator (2024/08/27)
-12. snake (2024/09/02)
+12. snake (2024/09/02 - 2024/09/dd)
 
   
 ## Project Ideas
