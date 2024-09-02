@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projet\\C#\\CSharp-Projects\\12. Snake\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC3D3C20-03BB-46CA-891D-7054B1C856BC}|12. Snake\\12. Snake.csproj|d:\\projet\\c#\\csharp-projects\\12. snake\\12. snake\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3D3C20-03BB-46CA-891D-7054B1C856BC}|12. Snake\\12. Snake.csproj|solutionrelative:12. snake\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projet\\C#\\CSharp-Projects\\12. Snake\\12. Snake\\Program.cs",
+              "RelativeDocumentMoniker": "12. Snake\\Program.cs",
+              "ToolTip": "D:\\Projet\\C#\\CSharp-Projects\\12. Snake\\12. Snake\\Program.cs",
+              "RelativeToolTip": "12. Snake\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T15:48:28.19Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
